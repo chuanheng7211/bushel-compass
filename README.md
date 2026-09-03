@@ -2,7 +2,13 @@
 
 Public-data compass for people walking into produce: USDA farm-gate, Canadian wholesale asks, origin map, cost stack, and own-vs-rent.
 
-**Live:** after Vercel deploy, `https://bushel-compass.vercel.app`
+## Live website
+
+**[Open Bushel Compass](https://chuanheng7211.github.io/bushel-compass/)**
+
+Source: [github.com/chuanheng7211/bushel-compass](https://github.com/chuanheng7211/bushel-compass)
+
+Vercel production URL: [bushel-compass.vercel.app](https://bushel-compass.vercel.app) — auto-deploys from this repo after the Vercel GitHub App is granted access to it.
 
 ## What’s on the desk
 
@@ -15,18 +21,6 @@ Data is public: USDA NASS (monthly farm-gate), AAFC InfoHort (weekly wholesale),
 
 ## Refresh prices
 
-```bash
-export NASS_API_KEY=your-quick-stats-key
-python3 scripts/refresh-all.py
-```
-
 GitHub Action **Refresh public produce data** runs Mondays. Set repo secret `NASS_API_KEY`.
-
-## Local
-
-```bash
-npm install
-npm run dev
-```
 
 Auth is off. No database required.
