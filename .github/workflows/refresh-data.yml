@@ -1,0 +1,32 @@
+name: Refresh public produce data
+
+on:
+  schedule:
+    - cron: "15 14 * * 1"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull FAO, AAFC, NASS
+        env:
+          NASS_API_KEY: ${{ secrets.NASS_API_KEY }}
+        run: python3 scripts/refresh-all.py
+      - name: Commit if prices moved
+        run: |
+          git config user.name "bushel-bot"
+          git config user.email "bushel-bot@users.noreply.github.com"
+          git add src/data/world.json src/data/market.json src/data/nass_farm.json data/world.json data/market.json data/nass_farm.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "no data change"
+          else
+            git commit -m "chore: weekly public price refresh"
+            git push
+          fi

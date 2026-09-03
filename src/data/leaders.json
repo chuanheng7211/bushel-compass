@@ -1,0 +1,60 @@
+{
+  "thesis": "Big produce companies do not bid off NASS. NASS is a month-end national average for USDA indexes. The trade tape is USDA AMS shipping-point FOB that morning, then a program on top of it.",
+  "stackTheyUse": [
+    { "layer": "Farm / grove", "print": "Grower settlement, not public. Closest public floor is NASS prices received (monthly, all grades)." },
+    { "layer": "Packed FOB / shipping point", "print": "USDA AMS Market News, daily, by district, pack, size, grade. This is the actual industry benchmark." },
+    { "layer": "Crossing / import FOB", "print": "AMS at Nogales, McAllen, Philadelphia docks. Census unit values are too late for a PO." },
+    { "layer": "Landed DC", "print": "FOB + freight + duty + yield. Sysco and a retailer live here." },
+    { "layer": "Program / kit / brand", "print": "Contract: AMS FOB ± a schedule, or a fixed kit price. The SKU is no longer the commodity." }
+  ],
+  "houses": [
+    {
+      "name": "A Salinas / Yakima grower-shipper",
+      "what": "Sells packed cartons",
+      "bench": "AMS shipping-point FOB for that district that morning, plus pack-out. NASS is what USDA prints at month-end. They do not bid off it.",
+      "spread": "Farm-to-FOB is pack, cool, carton, and their margin — often 15–40% over farm-gate on fresh."
+    },
+    {
+      "name": "Driscoll's",
+      "what": "Berries, genetics + logistics",
+      "bench": "Clamshell FOB by district week. Open-market AMS berry FOB is the tape; their genetics usually clear a 15–20% premium over generic. NASS strawberry cwt is too coarse for a clamshell.",
+      "spread": "The brand is the spread. Independent berry FOB is not the Driscoll invoice."
+    },
+    {
+      "name": "Taylor Farms / Fresh Express",
+      "what": "Fresh-cut salad kits",
+      "bench": "They buy Salinas and Yuma head/romaine FOB as an input. The customer (Sysco, a grocer) pays for film, labor, yield, and a slot. Kit price is not lettuce cwt.",
+      "spread": "A bag can sit 3–6× the farm print after shrink. NASS head lettuce is their raw, not their SKU."
+    },
+    {
+      "name": "Dole (fruit, post veg sale)",
+      "what": "Bananas, pineapple, tropcial programs",
+      "bench": "Global Cavendish / MD2 contract curves, not a US NASS series. US leafy greens were the volatile book they stepped back from.",
+      "spread": "The floor is the boat and the ripening room, not Agricultural Prices."
+    },
+    {
+      "name": "Grimmway / Bolthouse",
+      "what": "Carrots (cello + juice)",
+      "bench": "Year-round California cello programs. NASS carrot cwt is the farm floor; they sell a branded bag and a juice line.",
+      "spread": "Two firms, most of US fresh carrots. A jumbo/juice quote is a different plant."
+    },
+    {
+      "name": "Mission Produce",
+      "what": "Avocados, origin-switch + ripen",
+      "bench": "Mexico / Peru / California crossing FOB plus a ripening spec. Avocados are not a useful NASS monthly series. They move fruit between hemispheres because they own rooms, not because of a dashboard.",
+      "spread": "Ripe-and-ready is the product. Green FOB is not the invoice."
+    },
+    {
+      "name": "Sysco / US Foods",
+      "what": "Broadline foodservice",
+      "bench": "Landed cost + yield + house margin. They buy Taylor / Dole / house programs. The PO is not an AMS print.",
+      "spread": "If you sell to them you are on their spec and their clock, not on NASS."
+    },
+    {
+      "name": "Ontario greenhouse (tomatoes, cukes, peppers)",
+      "what": "Local high-spec, winter vs Mexico",
+      "bench": "Their FOB vs Nogales / McAllen FOB + freight + CFIA. AAFC wholesale is the destination ask, not their settlement.",
+      "spread": "Winter Mexico sets the floor. Ontario sells spec, not the cheapest landed round."
+    }
+  ]
+}

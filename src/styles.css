@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14201a;
+  --color-ink-soft: #5c655e;
+  --color-paper: #f3efe4;
+  --color-cream: #fffdf8;
+  --color-land: #c9c0ae;
+  --color-rust: #c45c26;
+  --color-moss: #2f5d46;
+  --color-moss-soft: #dce8e0;
+  --color-warn: #8a5a12;
+  --color-warn-soft: #f3e6cc;
+  --color-rich: #8a2e16;
+  --color-rich-soft: #f3d8cf;
+  --color-background: #f3efe4;
+  --color-foreground: #14201a;
+  --color-card: #fffdf8;
+  --color-muted: #5c655e;
+  --color-border: #ddd6c8;
+  --color-primary: #14201a;
+  --color-primary-foreground: #f3efe4;
+  --color-accent: #c45c26;
+  --color-accent-foreground: #fffdf8;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

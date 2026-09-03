@@ -1,0 +1,199 @@
+{
+  "scenario": "buy_raw_or_processed",
+  "destination": "Toronto / Ontario",
+  "agents": [
+    {
+      "id": "compass",
+      "name": "Compass",
+      "job": "Is this quote fair?",
+      "asks": ["commodity", "form", "quotedPrice", "unit", "incoterm", "origin"]
+    },
+    {
+      "id": "origin",
+      "name": "Origin scout",
+      "job": "Which country or district is actually in season?"
+    },
+    {
+      "id": "channel",
+      "name": "Channel scout",
+      "job": "FOB, importer, terminal, processor, or program?"
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "job": "Where does this print sit in 10–25 years of farm-gate data?"
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "job": "How much of the retail dollar is still on the table at this step?"
+    },
+    {
+      "id": "vertical",
+      "name": "Vertical",
+      "job": "Own, contract, or leave this layer alone?"
+    }
+  ],
+  "commodities": {
+    "Apples": {
+      "nass": "apples_fresh",
+      "aafc": "Apples",
+      "form": ["fresh carton", "juice / peeler stock"],
+      "origins": [
+        {"when": "Aug–Apr", "who": "Washington / BC / Ontario", "why": "storage crop, dominant North American fresh supply"},
+        {"when": "Mar–Jul", "who": "Chile / New Zealand", "why": "counter-season southern hemisphere"},
+        {"when": "year-round process", "who": "US Midwest processors", "why": "culls and peelers, not extra-fancy fresh"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "Grower-shipper FOB", "use": "Buy a packed carton at Yakima / Wenatchee / Simcoe. Best when you can take a truckload."},
+        {"id": "importer", "label": "Licensed importer", "use": "Chilean / NZ fruit. They already paid duty, inspection, and ripening risk."},
+        {"id": "terminal", "label": "Ontario / US terminal", "use": "Broken pallets, mixed sizes. Pay wholesale ask; good for first loads."},
+        {"id": "processor", "label": "Processor / packer culls", "use": "If you make juice, sauce, slices. Farm processing price is far below extra-fancy FOB."},
+        {"id": "program", "label": "Season program", "use": "Float off USDA shipping-point + margin. Fair when you need weekly volume."}
+      ]
+    },
+    "Tomatoes": {
+      "nass": "tomatoes_fresh",
+      "aafc": "Tomatoes",
+      "form": ["field round", "greenhouse cluster", "roma / paste", "processed paste"],
+      "origins": [
+        {"when": "May–Oct", "who": "Ontario greenhouse + field", "why": "local, high spec, high price"},
+        {"when": "Nov–May", "who": "Mexico (Sinaloa / Baja) via Texas / Arizona", "why": "sets the winter floor"},
+        {"when": "winter field", "who": "Florida mature-green", "why": "foodservice rounds; not the same SKU as vine-ripe"},
+        {"when": "year-round process", "who": "California paste plants", "why": "processed $/ton is a different market than fresh"}
+      ],
+      "channels": [
+        {"id": "gh", "label": "Ontario greenhouse direct", "use": "Cluster / TOV. Pay greenhouse FOB, skip long haul."},
+        {"id": "mx", "label": "Mexico crossing importer", "use": "Winter volume. Check Nogales / McAllen FOB + freight + CFIA."},
+        {"id": "fl", "label": "Florida shipper", "use": "Mature-green for foodservice, not grocery vine-ripe."},
+        {"id": "terminal", "label": "Terminal / DC", "use": "Spot shorts. Compare to AAFC wholesale mid."},
+        {"id": "processor", "label": "Paste / dice plant", "use": "Only if you buy processed. NASS processing series, not fresh."}
+      ]
+    },
+    "Strawberries": {
+      "nass": "strawberries_fresh",
+      "aafc": "Strawberries",
+      "form": ["fresh clamshell", "processing / IQF"],
+      "origins": [
+        {"when": "Jun–Jul", "who": "Ontario / Quebec / NS", "why": "short local peak"},
+        {"when": "Mar–Oct", "who": "California districts rotating", "why": "US volume king"},
+        {"when": "Nov–Mar", "who": "Florida + Mexico + California winter", "why": "winter grocery"},
+        {"when": "process", "who": "IQF plants (Mexico / US / QC)", "why": "processing cwt is not a clamshell"}
+      ],
+      "channels": [
+        {"id": "local", "label": "Local farm / auction", "use": "June peak only. Quality clock is 48 hours."},
+        {"id": "fob", "label": "CA / FL / MX FOB", "use": "Driscoll-style or independent shipper. Freight and shrink dominate."},
+        {"id": "importer", "label": "Winter importer", "use": "Mexico / Florida through a licensed desk."},
+        {"id": "iqf", "label": "IQF / puree", "use": "If you process. Do not use fresh FOB as the bench."}
+      ]
+    },
+    "Potatoes": {
+      "nass": "potatoes_fresh",
+      "aafc": "Potatoes",
+      "form": ["tablestock", "fry / chip stock"],
+      "origins": [
+        {"when": "Sep–May", "who": "Idaho / Washington / PEI / Manitoba", "why": "storage crop"},
+        {"when": "spring news", "who": "California / Arizona / Florida", "why": "new crop before storage is gone"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "Shed FOB", "use": "50-lb or tote. Most honest print."},
+        {"id": "broker", "label": "Potato broker", "use": "Mix sizes and storage lots."},
+        {"id": "processor", "label": "Fry plant contract", "use": "Different variety and solids spec."}
+      ]
+    },
+    "Lettuce": {
+      "nass": "lettuce_head",
+      "aafc": "Lettuce",
+      "form": ["iceberg head", "romaine", "leaf", "fresh-cut"],
+      "origins": [
+        {"when": "Apr–Oct", "who": "Salinas–Watsonville", "why": "summer floor"},
+        {"when": "Nov–Mar", "who": "Yuma / Imperial + Arizona", "why": "desert winter"},
+        {"when": "cut salad", "who": "Taylor Farms / Fresh Express plants", "why": "you buy a bag, not a head"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "Salinas / Yuma FOB", "use": "Carton 24s. Watch freight — lettuce is mostly water."},
+        {"id": "cut", "label": "Fresh-cut plant", "use": "If you need kits. Price is processing + film + labor, not farm cwt."},
+        {"id": "terminal", "label": "Terminal", "use": "Emergency shorts only."}
+      ]
+    },
+    "Onions": {
+      "nass": "onions_dry",
+      "aafc": "Onions",
+      "form": ["yellow storage", "sweet", "red"],
+      "origins": [
+        {"when": "Aug–Mar", "who": "Idaho–Oregon / Washington / Ontario", "why": "storage yellows"},
+        {"when": "Apr–Jul", "who": "Mexico / Texas / Georgia sweets / Peru", "why": "new crop and sweets"}
+      ],
+      "channels": [{"id": "fob", "label": "Shed FOB", "use": "50-lb sacks. Compare NASS cwt to AAFC Vancouver/Toronto ask."}]
+    },
+    "Broccoli": {
+      "nass": "broccoli",
+      "aafc": "Broccoli",
+      "form": ["crown carton", "floret / frozen"],
+      "origins": [
+        {"when": "Apr–Nov", "who": "California Salinas / Santa Maria", "why": "main US print"},
+        {"when": "winter", "who": "Mexico + desert CA/AZ", "why": "winter grocery"},
+        {"when": "frozen", "who": "Mexico / Guatemala / US plants", "why": "processed is a different SKU"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "CA / MX FOB", "use": "Crown carton. Freight + ice matter."},
+        {"id": "frozen", "label": "Frozen floret", "use": "If you process or foodservice. Do not bench against fresh crowns."}
+      ]
+    },
+    "Carrots": {
+      "nass": "carrots",
+      "aafc": "Carrots",
+      "form": ["cello", "jumbo / process", "baby-cut"],
+      "origins": [
+        {"when": "most months", "who": "California (Grimmway / Bolthouse) + Ontario", "why": "two firms dominate US fresh"},
+        {"when": "process", "who": "Same sheds, jumbo line", "why": "juice and dice pay a different number"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "Cello FOB", "use": "Retail packs."},
+        {"id": "process", "label": "Jumbo / juice", "use": "If you process. Ask for jumbo, not cello."}
+      ]
+    },
+    "Cucumbers": {
+      "nass": "cucumbers",
+      "aafc": "Cucumbers",
+      "form": ["field slicer", "greenhouse English", "pickle"],
+      "origins": [
+        {"when": "May–Oct", "who": "Ontario greenhouse + field", "why": "local English cukes"},
+        {"when": "winter", "who": "Mexico + Florida", "why": "winter slicers"}
+      ],
+      "channels": [
+        {"id": "gh", "label": "Ontario GH", "use": "English seedless. Not comparable to field slicers."},
+        {"id": "mx", "label": "Mexico importer", "use": "Winter field."}
+      ]
+    },
+    "Grapes (Table)": {
+      "nass": "grapes_fresh",
+      "aafc": "Grapes (Table)",
+      "form": ["table lug", "juice / wine crush"],
+      "origins": [
+        {"when": "Jul–Dec", "who": "California", "why": "US table grape season"},
+        {"when": "Jan–Apr", "who": "Chile / Peru", "why": "counter-season"},
+        {"when": "May–Jun", "who": "Mexico / Coachella early", "why": "bridge"}
+      ],
+      "channels": [
+        {"id": "fob", "label": "CA FOB lug", "use": "Packed table fruit."},
+        {"id": "importer", "label": "Chile / Peru importer", "use": "Winter. Duty and arrival quality are the risk."}
+      ]
+    }
+  },
+  "channelsGeneric": [
+    {"id": "farm", "step": 0, "name": "Farm gate", "data": "NASS prices received (this file)"},
+    {"id": "fob", "step": 1, "name": "Packed FOB / shipping point", "data": "USDA AMS shipping-point"},
+    {"id": "import", "step": 2, "name": "Port / crossing", "data": "Census unit value + AMS import FOB"},
+    {"id": "freight", "step": 3, "name": "Reefer to GTA", "data": "AMS truck rates"},
+    {"id": "wholesale", "step": 4, "name": "Destination wholesale", "data": "AAFC weekly + AMS terminals"},
+    {"id": "retail", "step": 5, "name": "Retail / foodservice", "data": "BLS / store ticket"}
+  ],
+  "fairnessRules": {
+    "farm": "A farm-gate quote should sit near this month's NASS percentile, same utilization (fresh vs process).",
+    "fob": "Packed FOB is farm + pack/cool. Expect 15–40% over farm-gate on fresh cartons.",
+    "landed": "Landed Toronto ≈ FOB + freight + duty/broker. If a 'FOB' quote already exceeds destination wholesale, walk away or check quality.",
+    "wholesale": "AAFC mid is an asking range to retail, not a cleared trade.",
+    "process": "Never bench processed $/ton against fresh extra-fancy."
+  }
+}
