@@ -1,10 +1,16 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { Pause, Play } from "lucide-react";
+import { CountryClock, OriginMix, YearRail } from "@/components/origin-year";
+import { OriginFactors } from "@/components/origin-factors";
 import {
   MONTH_LABELS,
   GTA,
   arcPath,
+  beltRows,
+  handoffStory,
   lanesFor,
+  majorLane,
   namedPlace,
   project,
   storyFor,
@@ -28,10 +34,48 @@ export function OriginMap({
 }) {
   const now = new Date().getMonth() + 1;
   const [month, setMonth] = useState(now);
+  const [playing, setPlaying] = useState(false);
+  const [picked, setPicked] = useState<string | null>(null);
   const lanes = useMemo(() => lanesFor(play, month, snap), [play, month, snap]);
+  const rows = useMemo(() => beltRows(lanes), [lanes]);
   const named = namedPlace(originNote || "");
   const live = lanes.filter((l) => l.live);
   const dest = project(GTA.lon, GTA.lat);
+  const major = majorLane(lanes);
+  const cut = handoffStory(rows, month, cmd);
+  const mapLanes = useMemo(() => {
+    const m = new Map<string, Lane>();
+    for (const l of lanes) {
+      const prev = m.get(l.id);
+      if (!prev || (l.live && !prev.live) || (prev.process && !l.process && l.live === prev.live)) {
+        m.set(l.id, l);
+      }
+    }
+    return [...m.values()];
+  }, [lanes]);
+
+  useEffect(() => {
+    setPicked(null);
+  }, [cmd]);
+
+  useEffect(() => {
+    if (!playing) return;
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPlaying(false);
+      return;
+    }
+    const t = window.setInterval(() => {
+      setMonth((m) => (m === 12 ? 1 : m + 1));
+    }, 750);
+    return () => window.clearInterval(t);
+  }, [playing]);
+
+  function pickMonth(m: number) {
+    setPlaying(false);
+    setMonth(m);
+  }
+
+  const shown = live.length ? live : lanes;
 
   return (
     <div>
@@ -40,14 +84,23 @@ export function OriginMap({
           <p className="text-xs font-medium uppercase tracking-wide text-ink-soft">
             {MONTH_LABELS[month - 1]} lanes into the GTA
           </p>
-          <p className="mt-1 max-w-prose text-sm text-ink-soft">{storyFor(lanes, month, cmd)}</p>
+          <p className="mt-1 max-w-prose text-sm" aria-live="polite">
+            {cut.title}. {storyFor(lanes, month, cmd)}
+          </p>
+          {major ? (
+            <p className="mt-1 text-sm text-ink-soft">
+              Major source this month: <b className="text-ink">{major.label}</b>
+              {major.mix > 0 ? ` · ${Math.round(major.mix * 100)}% of this week’s AAFC quotes` : ""}
+              {` · ${major.mode === "boat" ? `${major.daysToGta}d sea` : major.daysToGta <= 1 ? "local" : `${major.daysToGta}d reefer`}`}
+            </p>
+          ) : null}
         </div>
-        {!compact ? (
-          <p className="text-xs text-ink-soft">Drag the month. Arcs = how the raw actually moves.</p>
-        ) : (
+        {compact ? (
           <Link to="/origins" className="text-sm text-rust no-underline">
             Open full source map
           </Link>
+        ) : (
+          <p className="text-xs text-ink-soft">Play the year, or drag the month. Solid = truck. Dash = boat.</p>
         )}
       </div>
 
@@ -68,20 +121,28 @@ export function OriginMap({
             NZ inset
           </text>
 
-          {lanes.map((l) => (
+          {mapLanes.map((l) => (
             <path
-              key={`arc-${l.id}-${l.when}`}
+              key={`arc-${l.id}`}
               d={arcPath(l)}
               fill="none"
               stroke={l.live ? "var(--color-rust)" : "var(--color-line)"}
               strokeWidth={l.live ? Math.max(1.4, 1.2 + l.mix * 6) : 1}
               strokeDasharray={l.mode === "boat" ? "6 5" : l.live ? undefined : "3 4"}
-              opacity={l.live ? 0.85 : 0.35}
+              opacity={l.live ? (picked && picked !== l.id ? 0.25 : 0.85) : 0.28}
+              style={{ transition: "opacity 200ms ease, stroke-width 200ms ease" }}
             />
           ))}
 
-          {lanes.map((l) => (
-            <Mark key={l.id + l.when} lane={l} named={named?.id === l.id} />
+          {mapLanes.map((l) => (
+            <Mark
+              key={l.id}
+              lane={l}
+              named={named?.id === l.id}
+              major={major?.id === l.id}
+              dim={Boolean(picked && picked !== l.id)}
+              onPick={() => setPicked((id) => (id === l.id ? null : l.id))}
+            />
           ))}
 
           <circle cx={dest.x} cy={dest.y} r="8" fill="var(--color-ink)" />
@@ -99,11 +160,21 @@ export function OriginMap({
             min={1}
             max={12}
             value={month}
-            onChange={(e) => setMonth(Number(e.target.value))}
+            onChange={(e) => pickMonth(Number(e.target.value))}
             className="h-11 flex-1"
             style={{ accentColor: "var(--color-ink)" }}
             aria-label="Month on the source map"
           />
+          {!compact ? (
+            <button
+              type="button"
+              onClick={() => setPlaying((p) => !p)}
+              className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-xl border border-ink bg-ink px-3 text-sm text-paper"
+            >
+              {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+              {playing ? "Pause" : "Play year"}
+            </button>
+          ) : null}
         </label>
         <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-soft">
           <span className="inline-flex items-center gap-1">
@@ -112,48 +183,75 @@ export function OriginMap({
           <span className="inline-flex items-center gap-1">
             <span className="inline-block w-5 border-t border-dashed border-rust" /> boat / counter-season
           </span>
-          <span>Ring size = this week’s AAFC origin mix when we have it.</span>
+          <span>Ring size = this week’s AAFC mix. Click a district to pin it.</span>
         </div>
       </div>
 
-      <div className="mt-4">
-        <p className="text-xs font-medium uppercase tracking-wide text-ink-soft">Year clock — who is on</p>
-        <div className="mt-2 grid grid-cols-6 gap-1 sm:grid-cols-12">
-          {MONTH_LABELS.map((label, i) => {
-            const m = i + 1;
-            const on = lanes.some((l) => l.months.includes(m) && !l.process);
-            const active = m === month;
-            return (
-              <button
-                key={label}
-                type="button"
-                onClick={() => setMonth(m)}
-                className={cn(
-                  "min-h-11 rounded-lg border px-1 py-2 text-center text-xs",
-                  active ? "border-ink bg-ink text-paper" : on ? "border-line bg-cream" : "border-line bg-paper text-ink-soft",
-                )}
-              >
-                {label}
-              </button>
-            );
-          })}
+      {!compact ? (
+        <div className="mt-6 space-y-8">
+          <YearRail
+            cmd={cmd}
+            lanes={lanes}
+            month={month}
+            onMonth={pickMonth}
+            playing={playing}
+            onPlay={() => setPlaying((p) => !p)}
+            picked={picked}
+            onPick={setPicked}
+          />
+          <CountryClock lanes={lanes} month={month} onMonth={pickMonth} />
+          <OriginMix lanes={lanes} month={month} snap={snap} />
+          <OriginFactors cmd={cmd} month={month} rows={rows} />
         </div>
-      </div>
+      ) : (
+        <div className="mt-4">
+          <p className="text-xs font-medium uppercase tracking-wide text-ink-soft">Year clock</p>
+          <div className="mt-2 grid grid-cols-6 gap-1 sm:grid-cols-12">
+            {MONTH_LABELS.map((label, i) => {
+              const m = i + 1;
+              const on = lanes.some((l) => l.months.includes(m) && !l.process);
+              const active = m === month;
+              return (
+                <button
+                  key={label}
+                  type="button"
+                  onClick={() => pickMonth(m)}
+                  className={cn(
+                    "min-h-11 rounded-lg border px-1 py-2 text-center text-xs",
+                    active ? "border-ink bg-ink text-paper" : on ? "border-line bg-cream" : "border-line bg-paper text-ink-soft",
+                  )}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <ol className="mt-4 grid gap-2 sm:grid-cols-2">
-        {(live.length ? live : lanes).map((l) => (
-          <li key={l.id + l.when} className="rounded-lg border border-line bg-cream p-3">
-            <div className="flex items-baseline justify-between gap-2">
-              <b className="text-sm">{l.label}</b>
-              <span className="text-xs text-ink-soft">
-                {l.mode === "boat" ? `${l.daysToGta}d sea` : l.daysToGta <= 1 ? "local" : `${l.daysToGta}d reefer`}
-              </span>
-            </div>
-            <p className="text-xs text-ink-soft">
-              {l.when} · {l.live ? "on the map this month" : l.process ? "process, not fresh" : "off-season"}
-              {l.mix > 0 ? ` · ${Math.round(l.mix * 100)}% of this week’s AAFC quotes` : ""}
-            </p>
-            <p className="mt-1 text-xs text-ink-soft">{l.why}</p>
+        {(picked ? lanes.filter((l) => l.id === picked) : shown).map((l) => (
+          <li key={l.id + l.when}>
+            <button
+              type="button"
+              onClick={() => setPicked((id) => (id === l.id ? null : l.id))}
+              className={cn(
+                "w-full rounded-lg border p-3 text-left",
+                picked === l.id ? "border-ink bg-ink text-paper" : "border-line bg-cream",
+              )}
+            >
+              <div className="flex items-baseline justify-between gap-2">
+                <b className="text-sm">{l.label}</b>
+                <span className={cn("text-xs", picked === l.id ? "opacity-70" : "text-ink-soft")}>
+                  {l.mode === "boat" ? `${l.daysToGta}d sea` : l.daysToGta <= 1 ? "local" : `${l.daysToGta}d reefer`}
+                </span>
+              </div>
+              <p className={cn("text-xs", picked === l.id ? "opacity-80" : "text-ink-soft")}>
+                {l.when} · {l.live ? "on the map this month" : l.process ? "process, not fresh" : "off-season"}
+                {l.mix > 0 ? ` · ${Math.round(l.mix * 100)}% of this week’s AAFC quotes` : ""}
+              </p>
+              <p className={cn("mt-1 text-xs", picked === l.id ? "opacity-80" : "text-ink-soft")}>{l.why}</p>
+            </button>
           </li>
         ))}
       </ol>
@@ -161,23 +259,45 @@ export function OriginMap({
   );
 }
 
-function Mark({ lane, named }: { lane: Lane; named: boolean }) {
+function Mark({
+  lane,
+  named,
+  major,
+  dim,
+  onPick,
+}: {
+  lane: Lane;
+  named: boolean;
+  major: boolean;
+  dim: boolean;
+  onPick: () => void;
+}) {
   const { x, y } = project(lane.lon, lane.lat);
-  const r = 4 + (lane.live ? 3 : 0) + lane.mix * 10;
+  const r = 4 + (lane.live ? 3 : 0) + lane.mix * 10 + (major ? 2 : 0);
   return (
-    <g>
+    <g
+      onClick={onPick}
+      className="cursor-pointer"
+      opacity={dim ? 0.35 : 1}
+      style={{ transition: "opacity 200ms ease" }}
+    >
+      {major && lane.live ? (
+        <circle cx={x} cy={y} r={r + 6} fill="none" stroke="var(--color-rust)" strokeWidth="1.2" opacity="0.5" />
+      ) : null}
       <circle
         cx={x}
         cy={y}
         r={r}
         fill={lane.live ? "var(--color-rust)" : "var(--color-cream)"}
-        stroke={named ? "var(--color-ink)" : "var(--color-ink)"}
-        strokeWidth={named ? 2.5 : 1}
-        opacity={lane.live ? 1 : 0.55}
+        stroke={named || major ? "var(--color-ink)" : "var(--color-ink)"}
+        strokeWidth={named || major ? 2.5 : 1}
       />
-      <text x={x + r + 4} y={y + 4} fill="var(--color-ink)" fontSize="11">
-        {lane.label}
-      </text>
+      {(lane.live || named || major) && (
+        <text x={x + r + 4} y={y + 4} fill="var(--color-ink)" fontSize="11">
+          {lane.label}
+          {major ? " · major" : ""}
+        </text>
+      )}
     </g>
   );
 }

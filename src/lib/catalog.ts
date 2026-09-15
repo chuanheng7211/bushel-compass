@@ -1,4 +1,4 @@
-import { marketFile, nassFarm, playbooks } from "./data";
+import { marketFile, nassFarm, playbooks, processFile } from "./data";
 import type { CommodityPlay, Playbooks } from "./types";
 
 /** NASS series id → AAFC / UI label */
@@ -52,6 +52,23 @@ const EXTRA_ORIGINS: Record<string, CommodityPlay["origins"]> = {
     { when: "May–Oct", who: "California / Arizona", why: "cantaloup NASS series" },
     { when: "winter", who: "Mexico / Central America", why: "import honeydew / cantaloup" },
   ],
+  Avocados: [
+    { when: "year-round", who: "Mexico", why: "Michoacán is the floor" },
+    { when: "Apr–Aug", who: "California / Peru", why: "CA spring overlay + Peru summer boat" },
+  ],
+  Bananas: [{ when: "year-round", who: "Ecuador / Costa Rica / Colombia", why: "tropical boat + ripening room — the pink-sheet crop" }],
+  Blueberries: [
+    { when: "Jun–Aug", who: "Ontario / Quebec / Michigan / Pacific Northwest", why: "northern summer" },
+    { when: "Sep–May", who: "Chile / Peru", why: "counter-season clamshells" },
+  ],
+  Oranges: [
+    { when: "Nov–May", who: "California / Florida", why: "US navel / valencia window" },
+    { when: "Jun–Oct", who: "Chile / South Africa / Australia", why: "counter-season navels" },
+  ],
+  Peppers: [
+    { when: "Apr–Oct", who: "Ontario greenhouse", why: "colored spec, local" },
+    { when: "Nov–May", who: "Mexico via Texas / Arizona", why: "winter floor" },
+  ],
 };
 
 export type CatalogItem = {
@@ -84,12 +101,19 @@ export function fullPlaybooks(): Playbooks {
     const existing = commodities[item.label];
     if (existing) {
       if (!existing.nass && item.nass) existing.nass = item.nass;
+      const extra = processFile.crops[item.label];
+      if (extra) {
+        for (const f of extra.forms) {
+          if (!existing.form.includes(f.label)) existing.form.push(f.label);
+        }
+      }
       continue;
     }
+    const extra = processFile.crops[item.label];
     commodities[item.label] = {
       nass: item.nass,
       aafc: item.label,
-      form: ["fresh"],
+      form: extra ? extra.forms.map((f) => f.label) : ["fresh"],
       origins: EXTRA_ORIGINS[item.label] || [],
       channels: [
         { id: "fob", label: "Origin FOB", use: "AMS shipping-point is what a shipper actually trades." },

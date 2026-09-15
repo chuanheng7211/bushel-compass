@@ -1,15 +1,21 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Compass, Globe, GitBranch, History, Layers, Landmark } from "lucide-react";
-import { analyzeQuote, fmt, forecastFor, paybackYears, seriesFor } from "@/lib/compass";
+import { analyzeQuote, fmt, forecastFor, fromCadKg, FX, paybackYears, seriesFor } from "@/lib/compass";
 import { layersFile, marketFile, nassFarm } from "@/lib/data";
-import { fullPlaybooks, cropPrints } from "@/lib/catalog";
+import { cropPrints, fullPlaybooks } from "@/lib/catalog";
+import { cropSubs, printForForm } from "@/lib/substitutes";
 import { HistoryChart } from "@/components/history-chart";
 import { OutlookChart } from "@/components/outlook-chart";
 import { OriginMap } from "@/components/origin-map";
 import { CropGrid } from "@/components/crop-grid";
+import { CropTape } from "@/components/crop-tape";
+import { SubstituteStrip } from "@/components/sales-chain";
 import { Movers } from "@/components/movers";
 import { Freshness } from "@/components/freshness";
 import { SiteHeader } from "@/components/site-header";
+import { DeltaLine } from "@/components/delta-line";
+import { convertTypedPrice, useDeskMoney } from "@/lib/desk-money";
+import { useDesk } from "@/lib/desk-store";
 import { cn } from "@/lib/utils";
 import type { AgentId, Analysis, Basis, Layer, LayersFile, Unit, VerdictCls } from "@/lib/types";
 
@@ -48,7 +54,9 @@ export function CompassApp() {
     fullPlaybooks().commodities[SAMPLE.cmd]?.form?.[0] || "fresh carton",
   );
   const [price, setPrice] = useState(SAMPLE.price);
-  const [unit, setUnit] = useState<Unit>(SAMPLE.unit);
+  const unit = useDesk((s) => s.unit);
+  const setDeskUnit = useDesk((s) => s.setUnit);
+  const prevUnit = useRef(unit);
   const [basis, setBasis] = useState<Basis>(SAMPLE.basis);
   const [originNote, setOriginNote] = useState(SAMPLE.originNote);
   const [kgWeek, setKgWeek] = useState(8000);
@@ -56,18 +64,29 @@ export function CompassApp() {
 
   const forms = play.commodities[cmd]?.form || ["fresh"];
 
+  useEffect(() => {
+    if (prevUnit.current === unit) return;
+    setPrice((p) => convertTypedPrice(p, prevUnit.current, unit, FX));
+    prevUnit.current = unit;
+  }, [unit]);
+
+  function setUnit(next: Unit) {
+    setPrice((p) => convertTypedPrice(p, unit, next, FX));
+    prevUnit.current = next;
+    setDeskUnit(next);
+  }
+
   function pickCmd(next: string) {
     setCmd(next);
     const f = play.commodities[next]?.form?.[0];
     if (f) setForm(f);
     const p = cropPrints(next);
+    const fx = FX;
     if (p.wholesale != null) {
-      setPrice(p.wholesale.toFixed(2));
-      setUnit("cadKg");
+      setPrice(fromCadKg(p.wholesale, unit, fx).toFixed(2));
       setBasis("wholesale");
     } else if (p.farm != null) {
-      setPrice(p.farm.toFixed(2));
-      setUnit("cadKg");
+      setPrice(fromCadKg(p.farm, unit, fx).toFixed(2));
       setBasis("farm");
     }
     requestAnimationFrame(() => {
@@ -115,6 +134,13 @@ export function CompassApp() {
         <CropGrid value={cmd} onChange={pickCmd} />
       </section>
 
+      <section className="px-4 pb-2 sm:px-9">
+        <CropTape crop={cmd} />
+      </section>
+      <section className="px-4 pb-4 sm:px-9">
+        <SubstituteStrip cmd={cmd} />
+      </section>
+
       <div className="flex gap-2 overflow-x-auto px-4 pb-2 sm:px-9">
         {play.agents.map((a) => {
           const Icon = ICONS[a.id] || Compass;
@@ -155,7 +181,17 @@ export function CompassApp() {
             id="form"
             className="mt-1 min-h-11 w-full rounded-lg border border-line bg-paper px-3"
             value={form}
-            onChange={(e) => setForm(e.target.value)}
+            onChange={(e) => {
+              const next = e.target.value;
+              setForm(next);
+              const hit = cropSubs(cmd).forms.find((x) => x.label === next);
+              if (!hit) return;
+              const p = printForForm(cmd, hit);
+              if (p) {
+                setPrice(fromCadKg(p.cadKg, unit, FX).toFixed(2));
+                setBasis(hit.kind === "fresh" ? "wholesale" : "process");
+              }
+            }}
           >
             {forms.map((f) => (
               <option key={f}>{f}</option>
@@ -218,8 +254,7 @@ export function CompassApp() {
             onClick={() => {
               setCmd(SAMPLE.cmd);
               setForm(play.commodities[SAMPLE.cmd]?.form?.[0] || "fresh carton");
-              setPrice(SAMPLE.price);
-              setUnit(SAMPLE.unit);
+              setPrice(convertTypedPrice(SAMPLE.price, SAMPLE.unit, unit, FX));
               setBasis(SAMPLE.basis);
               setOriginNote(SAMPLE.originNote);
               setAgent("compass");
@@ -283,6 +318,7 @@ function AgentView({
   setKgWeek: (n: number) => void;
   setCapex: (n: number) => void;
 }) {
+  const { cad, tag, unit } = useDeskMoney();
   if (agent === "history") {
     const last = (p.hist || []).slice(-12);
     const weeks = seriesFor(marketFile, p.cmd);
@@ -294,10 +330,13 @@ function AgentView({
           Two clocks: USDA farm-gate (monthly floor) and AAFC Vancouver ask (weekly). Outlook is a naive seasonal blend, not a model you should trade.
         </p>
         <p className="mt-2">
-          Latest farm print <b>${fmt(p.farm?.cadKg)}/kg</b>. Your quote is the{" "}
+          Latest farm print <b>{cad(p.farm?.cadKg)} {tag}</b>. Your quote is the{" "}
           <b>{p.quoteVsFarmPct ?? "—"}th</b> percentile of the farm series.
           {p.wholesale?.yoy != null ? ` Vancouver ask is ${p.wholesale.yoy}% vs a year ago.` : ""}
         </p>
+        <div className="mt-2">
+          <DeltaLine cmd={p.cmd} currentCadKg={p.quoteCadKg} />
+        </div>
         <h3 className="mt-4 font-display text-lg">Weekly destination ask + 8-week outlook</h3>
         <OutlookChart hist={weeks} forecast={outlook} quote={p.quoteCadKg} />
         <h3 className="mt-4 font-display text-lg">US farm-gate (NASS)</h3>
@@ -309,16 +348,16 @@ function AgentView({
             <thead>
               <tr className="text-ink-soft">
                 <th className="py-1 font-medium">Month</th>
-                <th className="py-1 font-medium">USD/lb</th>
-                <th className="py-1 font-medium">CAD/kg</th>
+                <th className="py-1 font-medium">{tag}</th>
+                {unit !== "usdLb" ? <th className="py-1 font-medium">USD/lb native</th> : null}
               </tr>
             </thead>
             <tbody>
               {last.map((h) => (
                 <tr key={h.d} className="border-t border-line">
                   <td className="py-1.5">{h.d.slice(0, 7)}</td>
-                  <td>${fmt(h.usdLb)}</td>
-                  <td>${fmt(h.cadKg)}</td>
+                  <td>{cad(h.cadKg)}</td>
+                  {unit !== "usdLb" ? <td>${fmt(h.usdLb)}</td> : null}
                 </tr>
               ))}
             </tbody>
@@ -389,7 +428,7 @@ function AgentView({
           key={label}
           n="·"
           label={label + (you ? " ← you" : "")}
-          value={`$${fmt(val)}/kg`}
+          value={`${cad(val)} ${tag}`}
         />
       );
     return (
@@ -401,11 +440,14 @@ function AgentView({
         <ul className="mt-3 list-none p-0">
           {row("US farm gate (NASS)", farm, p.basis === "farm")}
           {row("Packed FOB (farm + pack/cool, ~1.35× farm)", farm ? farm * 1.35 : null, p.basis === "fob")}
-          {row("Landed Toronto (FOB + freight, rough +$0.30/kg)", farm ? farm * 1.35 + 0.3 : null)}
+          {row("Landed Toronto (FOB + freight, modeled)", farm ? farm * 1.35 + 0.3 : null)}
           {row("Destination wholesale ask (AAFC)", ws, p.basis === "wholesale")}
           {row("Typical retail", retail, p.basis === "retail")}
           {row("Your quote", p.quoteCadKg, true)}
         </ul>
+        <div className="mt-3">
+          <DeltaLine cmd={p.cmd} currentCadKg={p.quoteCadKg} />
+        </div>
         <p className="mt-4 text-sm text-ink-soft">
           If your quote sits above wholesale and they called it FOB, they have already sold you the next two layers.
         </p>
@@ -424,7 +466,7 @@ function AgentView({
       math.years == null
         ? "Need a farm print and a wholesale mid to size the spread."
         : math.years > 7
-          ? `At ${kgWeek} kg/week and keeping ~$${fmt(math.take)}/kg of the farm-to-wholesale spread, a $${fmt(capex, 0)} layer takes ~${fmt(math.years, 1)} years. Rent it.`
+          ? `At ${kgWeek} kg/week and keeping ~${cad(math.take)} ${tag} of the farm-to-wholesale spread, a $${fmt(capex, 0)} layer takes ~${fmt(math.years, 1)} years. Rent it.`
           : math.years > 3
             ? `Same math: ~${fmt(math.years, 1)} years. Contract the layer; do not buy the building yet.`
             : `Same math: ~${fmt(math.years, 1)} years. Only then is owning this layer a conversation — and only after you have sold the output for a year.`;
@@ -434,7 +476,7 @@ function AgentView({
         <p className="mt-2 text-sm text-ink-soft">{layers?.thesis}</p>
         <p className="mt-3">
           Farm-to-wholesale gap on this item:{" "}
-          <b>{math.spread == null ? "—" : `$${fmt(math.spread)}/kg`}</b>. You do not keep the whole gap.
+          <b>{math.spread == null ? "—" : `${cad(math.spread)} ${tag}`}</b>. You do not keep the whole gap.
         </p>
         <div className="mt-4 flex flex-wrap gap-4">
           <label className="text-sm">
@@ -481,10 +523,10 @@ function AgentView({
   }
 
   const farm = p.farm
-    ? `$${fmt(p.farm.cadKg)}/kg ($${fmt(p.farm.usdLb)}/lb USD) · ${p.farm.d.slice(0, 7)}`
+    ? `${cad(p.farm.cadKg)} ${tag} ($${fmt(p.farm.usdLb)}/lb USD native) · ${p.farm.d.slice(0, 7)}`
     : "no NASS series";
   const ws = p.wholesale
-    ? `$${fmt(p.wholesale.p50)}/kg Vancouver ask · week ${p.wholesale.asof}`
+    ? `${cad(p.wholesale.p50)} ${tag} Vancouver ask · week ${p.wholesale.asof}`
     : "no AAFC mid";
   const weeks = seriesFor(marketFile, p.cmd);
   const outlook = forecastFor(marketFile, p.cmd);
@@ -495,8 +537,11 @@ function AgentView({
       <p className={cn("mt-3 rounded-lg px-3 py-2 text-sm", VERDICT_TONE[p.verdict.cls])}>
         {p.verdict.note}
       </p>
+      <div className="mt-2">
+        <DeltaLine cmd={p.cmd} currentCadKg={p.quoteCadKg} />
+      </div>
       <ul className="mt-2 list-none p-0">
-        <Step n="1" label="Your quote as CAD/kg" value={`$${fmt(p.quoteCadKg)} · ${p.basis} · ${p.form}`} />
+        <Step n="1" label={`Your quote as ${tag}`} value={`${cad(p.quoteCadKg)} · ${p.basis} · ${p.form}`} />
         <Step n="2" label="US farm gate (NASS, national monthly)" value={farm} />
         <Step n="3" label="Public wholesale mid (AAFC Vancouver)" value={ws} />
         <Step
@@ -520,7 +565,7 @@ function AgentView({
         <Step
           n="6"
           label="Next week outlook (naive)"
-          value={next ? `$${fmt(next.p)}/kg (band ${fmt(next.lo)}–${fmt(next.hi)})` : "not enough weeks"}
+          value={next ? `${cad(next.p)} ${tag} (band ${cad(next.lo)}–${cad(next.hi)})` : "not enough weeks"}
         />
       </ul>
       <h3 className="mt-4 font-display text-lg">Ask + outlook</h3>

@@ -8,6 +8,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { sliceByPeriod } from "@/lib/desk-filter";
+import { useDeskMoney } from "@/lib/desk-money";
 import type { ForecastPt, WeekPt } from "@/lib/types";
 
 export function OutlookChart({
@@ -19,52 +21,56 @@ export function OutlookChart({
   forecast: ForecastPt[];
   quote?: number;
 }) {
-  const past = hist.slice(-26).map((h) => ({
+  const { period, num, tag, periodLabel } = useDeskMoney();
+  const past = sliceByPeriod(hist, period, 13).map((h) => ({
     d: h.d.slice(5),
-    ask: h.p50,
-    quote,
+    ask: num(h.p50),
+    quote: quote != null ? num(quote) : undefined,
   }));
   const fut = forecast.map((f) => ({
     d: f.d.slice(5),
-    mid: f.p,
-    lo: f.lo,
-    hi: f.hi,
-    quote,
+    mid: num(f.p),
+    lo: num(f.lo),
+    hi: num(f.hi),
+    quote: quote != null ? num(quote) : undefined,
   }));
   const data = [...past, ...fut];
   if (!data.length) {
     return <p className="text-sm text-ink-soft">No weekly wholesale series for this city and item.</p>;
   }
   return (
-    <div className="h-56 w-full min-w-0">
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-          <CartesianGrid stroke="var(--color-line)" vertical={false} />
-          <XAxis dataKey="d" tick={{ fontSize: 11, fill: "var(--color-ink-soft)" }} minTickGap={22} />
-          <YAxis
-            tick={{ fontSize: 11, fill: "var(--color-ink-soft)" }}
-            tickFormatter={(v: number) => `$${v}`}
-            width={44}
-          />
-          <Tooltip
-            formatter={(v) => [`$${Number(v).toFixed(2)}/kg`, ""]}
-            contentStyle={{
-              background: "var(--color-cream)",
-              border: "1px solid var(--color-line)",
-              borderRadius: 12,
-              fontSize: 12,
-            }}
-          />
-          <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Line type="monotone" dataKey="ask" name="Weekly ask" stroke="var(--color-ink)" strokeWidth={2} dot={false} connectNulls />
-          <Line type="monotone" dataKey="mid" name="8-week outlook" stroke="var(--color-rust)" strokeWidth={1.5} dot={false} connectNulls />
-          <Line type="monotone" dataKey="lo" name="Outlook low" stroke="var(--color-ink-soft)" strokeDasharray="3 3" strokeWidth={1} dot={false} connectNulls />
-          <Line type="monotone" dataKey="hi" name="Outlook high" stroke="var(--color-ink-soft)" strokeDasharray="3 3" strokeWidth={1} dot={false} connectNulls />
-          {quote != null ? (
-            <Line type="monotone" dataKey="quote" name="Your quote" stroke="var(--color-moss)" strokeDasharray="4 4" strokeWidth={1.5} dot={false} />
-          ) : null}
-        </LineChart>
-      </ResponsiveContainer>
+    <div>
+      <p className="mb-1 text-xs text-ink-soft">Weekly ask · {periodLabel} · {tag}</p>
+      <div className="h-56 w-full min-w-0">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
+            <CartesianGrid stroke="var(--color-line)" vertical={false} />
+            <XAxis dataKey="d" tick={{ fontSize: 11, fill: "var(--color-ink-soft)" }} minTickGap={22} />
+            <YAxis
+              tick={{ fontSize: 11, fill: "var(--color-ink-soft)" }}
+              tickFormatter={(v: number) => `$${v}`}
+              width={48}
+            />
+            <Tooltip
+              formatter={(v) => [`$${Number(v).toFixed(2)} ${tag}`, ""]}
+              contentStyle={{
+                background: "var(--color-cream)",
+                border: "1px solid var(--color-line)",
+                borderRadius: 12,
+                fontSize: 12,
+              }}
+            />
+            <Legend wrapperStyle={{ fontSize: 12 }} />
+            <Line type="monotone" dataKey="ask" name="Weekly ask" stroke="var(--color-ink)" strokeWidth={2} dot={false} connectNulls />
+            <Line type="monotone" dataKey="mid" name="8-week outlook" stroke="var(--color-rust)" strokeWidth={1.5} dot={false} connectNulls />
+            <Line type="monotone" dataKey="lo" name="Outlook low" stroke="var(--color-ink-soft)" strokeDasharray="3 3" strokeWidth={1} dot={false} connectNulls />
+            <Line type="monotone" dataKey="hi" name="Outlook high" stroke="var(--color-ink-soft)" strokeDasharray="3 3" strokeWidth={1} dot={false} connectNulls />
+            {quote != null ? (
+              <Line type="monotone" dataKey="quote" name="Your quote" stroke="var(--color-moss)" strokeDasharray="4 4" strokeWidth={1.5} dot={false} />
+            ) : null}
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 }

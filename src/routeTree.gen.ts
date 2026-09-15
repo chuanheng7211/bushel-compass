@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BoardRouteImport } from './routes/board'
+import { Route as GroceryRouteImport } from './routes/grocery'
 import { Route as IndustryRouteImport } from './routes/industry'
+import { Route as MarketsRouteImport } from './routes/markets'
 import { Route as OriginsRouteImport } from './routes/origins'
 import { Route as WorldRouteImport } from './routes/world'
 
@@ -25,9 +27,19 @@ const BoardRoute = BoardRouteImport.update({
   path: '/board',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GroceryRoute = GroceryRouteImport.update({
+  id: '/grocery',
+  path: '/grocery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustryRoute = IndustryRouteImport.update({
   id: '/industry',
   path: '/industry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsRoute = MarketsRouteImport.update({
+  id: '/markets',
+  path: '/markets',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OriginsRoute = OriginsRouteImport.update({
@@ -44,14 +56,18 @@ const WorldRoute = WorldRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
+  '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
+  '/markets': typeof MarketsRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
+  '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
+  '/markets': typeof MarketsRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
@@ -59,22 +75,48 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
+  '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
+  '/markets': typeof MarketsRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/board' | '/industry' | '/origins' | '/world'
+  fullPaths:
+    | '/'
+    | '/board'
+    | '/grocery'
+    | '/industry'
+    | '/markets'
+    | '/origins'
+    | '/world'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/board' | '/industry' | '/origins' | '/world'
-  id: '__root__' | '/' | '/board' | '/industry' | '/origins' | '/world'
+  to:
+    | '/'
+    | '/board'
+    | '/grocery'
+    | '/industry'
+    | '/markets'
+    | '/origins'
+    | '/world'
+  id:
+    | '__root__'
+    | '/'
+    | '/board'
+    | '/grocery'
+    | '/industry'
+    | '/markets'
+    | '/origins'
+    | '/world'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BoardRoute: typeof BoardRoute
+  GroceryRoute: typeof GroceryRoute
   IndustryRoute: typeof IndustryRoute
+  MarketsRoute: typeof MarketsRoute
   OriginsRoute: typeof OriginsRoute
   WorldRoute: typeof WorldRoute
 }
@@ -95,11 +137,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/grocery': {
+      id: '/grocery'
+      path: '/grocery'
+      fullPath: '/grocery'
+      preLoaderRoute: typeof GroceryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industry': {
       id: '/industry'
       path: '/industry'
       fullPath: '/industry'
       preLoaderRoute: typeof IndustryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets': {
+      id: '/markets'
+      path: '/markets'
+      fullPath: '/markets'
+      preLoaderRoute: typeof MarketsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/origins': {
@@ -122,7 +178,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BoardRoute: BoardRoute,
+  GroceryRoute: GroceryRoute,
   IndustryRoute: IndustryRoute,
+  MarketsRoute: MarketsRoute,
   OriginsRoute: OriginsRoute,
   WorldRoute: WorldRoute,
 }

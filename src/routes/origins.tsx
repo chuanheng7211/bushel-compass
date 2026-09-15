@@ -1,34 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { OriginMap } from "@/components/origin-map";
-import { CropGrid } from "@/components/crop-grid";
 import { SiteHeader } from "@/components/site-header";
 import { wholesaleFor } from "@/lib/compass";
 import { fullPlaybooks } from "@/lib/catalog";
 import { marketFile } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/origins")({ component: OriginsPage });
 
 function OriginsPage() {
   const playAll = fullPlaybooks();
+  const crops = useMemo(
+    () =>
+      Object.keys(playAll.commodities)
+        .filter((k) => (playAll.commodities[k].origins || []).length > 0)
+        .sort(),
+    [playAll],
+  );
   const [cmd, setCmd] = useState("Apples");
   const play = playAll.commodities[cmd];
   const snap = useMemo(() => wholesaleFor(marketFile, cmd), [cmd]);
 
   return (
     <div className="min-h-dvh bg-paper text-ink">
-      <SiteHeader kicker="Where the raw is grown, and how it migrates into the GTA." />
-      <section className="flex flex-wrap items-end justify-between gap-4 px-4 pt-6 sm:px-9">
-        <div className="max-w-xl">
-          <h1 className="font-display text-3xl leading-tight sm:text-4xl">
-            The crop does not sit still.
-          </h1>
-          <p className="mt-2 max-w-prose text-sm text-ink-soft">
-            Ontario supply is a moving window. Drag the month. Solid arcs are reefer trucks; dashed arcs are boats. Ring size follows this week’s AAFC origin mix when we have it.
-          </p>
-        </div>
-        <div className="mt-4">
-          <CropGrid value={cmd} onChange={setCmd} />
+      <SiteHeader kicker="Where the raw is grown, and how the country of origin walks into the GTA." />
+      <section className="px-4 pt-6 sm:px-9">
+        <h1 className="font-display text-3xl leading-tight sm:text-4xl">
+          The crop does not sit still.
+        </h1>
+        <p className="mt-2 max-w-2xl text-sm text-ink-soft">
+          Play the year. The rail is who is in season; the hatch is a handoff. Color is country. Ring size is this week’s AAFC mix. Weather here is the climate clock of the belt — a freeze in a live district, not an FAO index.
+        </p>
+        <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
+          {crops.map((label) => {
+            const on = cmd === label;
+            return (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setCmd(label)}
+                className={cn(
+                  "min-h-11 shrink-0 rounded-xl border px-3 py-2 text-sm",
+                  on ? "border-ink bg-ink text-paper" : "border-line bg-cream text-ink",
+                )}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
       </section>
       <section className="px-4 py-4 pb-16 sm:px-9">
@@ -44,7 +64,7 @@ function OriginsPage() {
           />
           <Note
             t="Counter-season boat"
-            d="Chile, Peru, New Zealand. Two to three weeks on the water. The importer already ate duty, inspection, and arrival quality. Do not compare their FOB to a Yakima carton."
+            d="Chile, Peru, New Zealand, Ecuador. Two to three weeks on the water. The importer already ate duty, inspection, and arrival quality. Do not compare their FOB to a Yakima carton."
           />
         </div>
       </section>

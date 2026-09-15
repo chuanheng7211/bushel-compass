@@ -25,6 +25,22 @@ export function toCadKg(value: number, unit: Unit, fx = FX): number | null {
   return value;
 }
 
+export function fromCadKg(cadKg: number, unit: Unit, fx = FX): number {
+  if (!Number.isFinite(cadKg)) return cadKg;
+  if (unit === "cadKg") return cadKg;
+  if (unit === "cadLb") return cadKg / LB_PER_KG;
+  if (unit === "usdKg") return cadKg / fx;
+  if (unit === "usdLb") return cadKg / (LB_PER_KG * fx);
+  return cadKg;
+}
+
+export function unitShort(unit: Unit): string {
+  if (unit === "cadLb") return "CAD/lb";
+  if (unit === "usdLb") return "USD/lb";
+  if (unit === "usdKg") return "USD/kg";
+  return "CAD/kg";
+}
+
 export function fmt(n: number | null | undefined, d = 2): string {
   if (n == null || Number.isNaN(n)) return "—";
   return Number(n).toFixed(d);

@@ -1,0 +1,4767 @@
+{
+  "generated": "2026-09-08",
+  "source": "USDA NASS prices received (processing / dry beans) + BLS average price (grocery).",
+  "fxUsdCad": 1.381165,
+  "thesis": "Frozen, dried, juice, and paste are often more transparent than a fresh carton because they store, processors report a $/ton, dry beans print monthly, and FCOJ has a futures pit. They are not the carton. A juice apple is not extra-fancy; paste is not a greenhouse cluster; FCOJ is not a navel.",
+  "disclaimer": "NASS processing is usually a marketing year, national, all grades of processing fruit. BLS is a US grocery average, not a GTA invoice. AAFC is a destination ask. AMS shipping-point FOB is still the real fresh trade tape and is not scraped here.",
+  "series": {
+    "apples_process": {
+      "id": "apples_process",
+      "crop": "Apples",
+      "short": "APPLES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 77,
+      "monthly": [
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 129.0,
+          "usdLb": 0.0645,
+          "cadKg": 0.196,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 190.0,
+          "usdLb": 0.095,
+          "cadKg": 0.289,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 198.0,
+          "usdLb": 0.099,
+          "cadKg": 0.301,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 132.0,
+          "usdLb": 0.066,
+          "cadKg": 0.201,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 187.0,
+          "usdLb": 0.0935,
+          "cadKg": 0.285,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 226.0,
+          "usdLb": 0.113,
+          "cadKg": 0.344,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 281.0,
+          "usdLb": 0.1405,
+          "cadKg": 0.428,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 197.0,
+          "usdLb": 0.0985,
+          "cadKg": 0.3,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 178.0,
+          "usdLb": 0.089,
+          "cadKg": 0.271,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 201.0,
+          "usdLb": 0.1005,
+          "cadKg": 0.306,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 214.0,
+          "usdLb": 0.107,
+          "cadKg": 0.326,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 248.0,
+          "usdLb": 0.124,
+          "cadKg": 0.378,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 207.0,
+          "usdLb": 0.1035,
+          "cadKg": 0.315,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 200.0,
+          "usdLb": 0.1,
+          "cadKg": 0.304,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 203.0,
+          "usdLb": 0.1015,
+          "cadKg": 0.309,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 271.0,
+          "usdLb": 0.1355,
+          "cadKg": 0.413,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 254.0,
+          "usdLb": 0.127,
+          "cadKg": 0.387,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 203.0,
+          "usdLb": 0.1015,
+          "cadKg": 0.309,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 226.0,
+          "usdLb": 0.113,
+          "cadKg": 0.344,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 262.0,
+          "usdLb": 0.131,
+          "cadKg": 0.399,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 262.0,
+        "usdLb": 0.131,
+        "cadKg": 0.399,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Apples, Processing"
+    },
+    "tomatoes_process": {
+      "id": "tomatoes_process",
+      "crop": "Tomatoes",
+      "short": "TOMATOES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 45,
+      "monthly": [
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 87.2,
+          "usdLb": 0.0436,
+          "cadKg": 0.133,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 87.2,
+          "usdLb": 0.0436,
+          "cadKg": 0.133,
+          "period": "YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 72.5,
+          "usdLb": 0.0362,
+          "cadKg": 0.11,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 72.5,
+          "usdLb": 0.0362,
+          "cadKg": 0.11,
+          "period": "YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 75.6,
+          "usdLb": 0.0378,
+          "cadKg": 0.115,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 75.6,
+          "usdLb": 0.0378,
+          "cadKg": 0.115,
+          "period": "YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 76.7,
+          "usdLb": 0.0384,
+          "cadKg": 0.117,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 90.1,
+          "usdLb": 0.045,
+          "cadKg": 0.137,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 99.3,
+          "usdLb": 0.0496,
+          "cadKg": 0.151,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 93.7,
+          "usdLb": 0.0469,
+          "cadKg": 0.143,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 87.3,
+          "usdLb": 0.0437,
+          "cadKg": 0.133,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 82.7,
+          "usdLb": 0.0414,
+          "cadKg": 0.126,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 81.5,
+          "usdLb": 0.0408,
+          "cadKg": 0.124,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 80.0,
+          "usdLb": 0.04,
+          "cadKg": 0.122,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 76.0,
+          "usdLb": 0.038,
+          "cadKg": 0.116,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 84.0,
+          "usdLb": 0.042,
+          "cadKg": 0.128,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 111.0,
+          "usdLb": 0.0555,
+          "cadKg": 0.169,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 144.0,
+          "usdLb": 0.072,
+          "cadKg": 0.219,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 116.0,
+          "usdLb": 0.058,
+          "cadKg": 0.177,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 108.0,
+          "usdLb": 0.054,
+          "cadKg": 0.164,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 108.0,
+        "usdLb": 0.054,
+        "cadKg": 0.164,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Tomatoes, Processing"
+    },
+    "potatoes_process": {
+      "id": "potatoes_process",
+      "crop": "Potatoes",
+      "short": "POTATOES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / CWT",
+      "freq": "ANNUAL",
+      "unit": "cwt",
+      "n": 22,
+      "monthly": [
+        {
+          "y": 2005,
+          "m": 12,
+          "d": "2005-12-01",
+          "raw": 5.39,
+          "usdLb": 0.0539,
+          "cadKg": 0.164,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 5.9,
+          "usdLb": 0.059,
+          "cadKg": 0.18,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 6.01,
+          "usdLb": 0.0601,
+          "cadKg": 0.183,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 6.49,
+          "usdLb": 0.0649,
+          "cadKg": 0.198,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 8.15,
+          "usdLb": 0.0815,
+          "cadKg": 0.248,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 7.41,
+          "usdLb": 0.0741,
+          "cadKg": 0.226,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 7.84,
+          "usdLb": 0.0784,
+          "cadKg": 0.239,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 8.27,
+          "usdLb": 0.0827,
+          "cadKg": 0.252,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 8.51,
+          "usdLb": 0.0851,
+          "cadKg": 0.259,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 8.24,
+          "usdLb": 0.0824,
+          "cadKg": 0.251,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 8.04,
+          "usdLb": 0.0804,
+          "cadKg": 0.245,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 8.03,
+          "usdLb": 0.0803,
+          "cadKg": 0.245,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 7.8,
+          "usdLb": 0.078,
+          "cadKg": 0.238,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 7.9,
+          "usdLb": 0.079,
+          "cadKg": 0.241,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 8.46,
+          "usdLb": 0.0846,
+          "cadKg": 0.258,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 8.07,
+          "usdLb": 0.0807,
+          "cadKg": 0.246,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 8.39,
+          "usdLb": 0.0839,
+          "cadKg": 0.255,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 10.1,
+          "usdLb": 0.101,
+          "cadKg": 0.308,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 11.2,
+          "usdLb": 0.112,
+          "cadKg": 0.341,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 11.0,
+          "usdLb": 0.11,
+          "cadKg": 0.335,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2024,
+        "m": 12,
+        "d": "2024-12-01",
+        "raw": 11.0,
+        "usdLb": 0.11,
+        "cadKg": 0.335,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Potatoes, Processing"
+    },
+    "strawberries_process": {
+      "id": "strawberries_process",
+      "crop": "Strawberries",
+      "short": "STRAWBERRIES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / CWT",
+      "freq": "ANNUAL",
+      "unit": "cwt",
+      "n": 44,
+      "monthly": [
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 30.9,
+          "usdLb": 0.309,
+          "cadKg": 0.941,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 30.9,
+          "usdLb": 0.309,
+          "cadKg": 0.941,
+          "period": "YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 29.2,
+          "usdLb": 0.292,
+          "cadKg": 0.889,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 29.2,
+          "usdLb": 0.292,
+          "cadKg": 0.889,
+          "period": "YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 34.8,
+          "usdLb": 0.348,
+          "cadKg": 1.06,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 34.8,
+          "usdLb": 0.348,
+          "cadKg": 1.06,
+          "period": "YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 33.4,
+          "usdLb": 0.334,
+          "cadKg": 1.017,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 34.9,
+          "usdLb": 0.349,
+          "cadKg": 1.063,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 42.6,
+          "usdLb": 0.426,
+          "cadKg": 1.297,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 46.7,
+          "usdLb": 0.467,
+          "cadKg": 1.422,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 47.6,
+          "usdLb": 0.476,
+          "cadKg": 1.449,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 37.2,
+          "usdLb": 0.372,
+          "cadKg": 1.133,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 43.7,
+          "usdLb": 0.437,
+          "cadKg": 1.331,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 52.8,
+          "usdLb": 0.528,
+          "cadKg": 1.608,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 38.1,
+          "usdLb": 0.381,
+          "cadKg": 1.16,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 64.0,
+          "usdLb": 0.64,
+          "cadKg": 1.949,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 27.1,
+          "usdLb": 0.271,
+          "cadKg": 0.825,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 43.8,
+          "usdLb": 0.438,
+          "cadKg": 1.334,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 41.3,
+          "usdLb": 0.413,
+          "cadKg": 1.258,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 51.1,
+          "usdLb": 0.511,
+          "cadKg": 1.556,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 51.1,
+        "usdLb": 0.511,
+        "cadKg": 1.556,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Strawberries, Processing"
+    },
+    "grapes_process": {
+      "id": "grapes_process",
+      "crop": "Grapes (Table)",
+      "short": "GRAPES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 452.0,
+          "usdLb": 0.226,
+          "cadKg": 0.688,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 432.0,
+          "usdLb": 0.216,
+          "cadKg": 0.658,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 448.0,
+          "usdLb": 0.224,
+          "cadKg": 0.682,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 492.0,
+          "usdLb": 0.246,
+          "cadKg": 0.749,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 487.0,
+          "usdLb": 0.2435,
+          "cadKg": 0.741,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 515.0,
+          "usdLb": 0.2575,
+          "cadKg": 0.784,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 662.0,
+          "usdLb": 0.331,
+          "cadKg": 1.008,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 605.0,
+          "usdLb": 0.3025,
+          "cadKg": 0.921,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 619.0,
+          "usdLb": 0.3095,
+          "cadKg": 0.942,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 629.0,
+          "usdLb": 0.3145,
+          "cadKg": 0.958,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 711.0,
+          "usdLb": 0.3555,
+          "cadKg": 1.082,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 776.0,
+          "usdLb": 0.388,
+          "cadKg": 1.181,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 829.0,
+          "usdLb": 0.4145,
+          "cadKg": 1.262,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 770.0,
+          "usdLb": 0.385,
+          "cadKg": 1.172,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 660.0,
+          "usdLb": 0.33,
+          "cadKg": 1.005,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 844.0,
+          "usdLb": 0.422,
+          "cadKg": 1.285,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 890.0,
+          "usdLb": 0.445,
+          "cadKg": 1.355,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 994.0,
+          "usdLb": 0.497,
+          "cadKg": 1.513,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 992.0,
+          "usdLb": 0.496,
+          "cadKg": 1.51,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 956.0,
+          "usdLb": 0.478,
+          "cadKg": 1.455,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 956.0,
+        "usdLb": 0.478,
+        "cadKg": 1.455,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Grapes, Processing"
+    },
+    "peaches_process": {
+      "id": "peaches_process",
+      "crop": "Peaches",
+      "short": "PEACHES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 30,
+      "monthly": [
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 273.0,
+          "usdLb": 0.1365,
+          "cadKg": 0.416,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 283.0,
+          "usdLb": 0.1415,
+          "cadKg": 0.431,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 315.0,
+          "usdLb": 0.1575,
+          "cadKg": 0.48,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 321.0,
+          "usdLb": 0.1605,
+          "cadKg": 0.489,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 304.0,
+          "usdLb": 0.152,
+          "cadKg": 0.463,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 292.0,
+          "usdLb": 0.146,
+          "cadKg": 0.445,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 323.0,
+          "usdLb": 0.1615,
+          "cadKg": 0.492,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 343.0,
+          "usdLb": 0.1715,
+          "cadKg": 0.522,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 364.0,
+          "usdLb": 0.182,
+          "cadKg": 0.554,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 451.0,
+          "usdLb": 0.2255,
+          "cadKg": 0.687,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 489.0,
+          "usdLb": 0.2445,
+          "cadKg": 0.744,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 460.0,
+          "usdLb": 0.23,
+          "cadKg": 0.7,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 454.0,
+          "usdLb": 0.227,
+          "cadKg": 0.691,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 452.0,
+          "usdLb": 0.226,
+          "cadKg": 0.688,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 452.0,
+          "usdLb": 0.226,
+          "cadKg": 0.688,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 487.0,
+          "usdLb": 0.2435,
+          "cadKg": 0.741,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 564.0,
+          "usdLb": 0.282,
+          "cadKg": 0.859,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 608.0,
+          "usdLb": 0.304,
+          "cadKg": 0.926,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 613.0,
+          "usdLb": 0.3065,
+          "cadKg": 0.933,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 619.0,
+          "usdLb": 0.3095,
+          "cadKg": 0.942,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 619.0,
+        "usdLb": 0.3095,
+        "cadKg": 0.942,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Peaches, Processing"
+    },
+    "pears_process": {
+      "id": "pears_process",
+      "crop": "Pears",
+      "short": "PEARS, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 14,
+      "monthly": [
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 214.0,
+          "usdLb": 0.107,
+          "cadKg": 0.326,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 276.0,
+          "usdLb": 0.138,
+          "cadKg": 0.42,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 287.0,
+          "usdLb": 0.1435,
+          "cadKg": 0.437,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 341.0,
+          "usdLb": 0.1705,
+          "cadKg": 0.519,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 406.0,
+          "usdLb": 0.203,
+          "cadKg": 0.618,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 384.0,
+          "usdLb": 0.192,
+          "cadKg": 0.585,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 366.0,
+          "usdLb": 0.183,
+          "cadKg": 0.557,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 355.0,
+          "usdLb": 0.1775,
+          "cadKg": 0.54,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 371.0,
+          "usdLb": 0.1855,
+          "cadKg": 0.565,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 383.0,
+          "usdLb": 0.1915,
+          "cadKg": 0.583,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 443.0,
+          "usdLb": 0.2215,
+          "cadKg": 0.674,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 470.0,
+          "usdLb": 0.235,
+          "cadKg": 0.716,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 458.0,
+          "usdLb": 0.229,
+          "cadKg": 0.697,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 437.0,
+          "usdLb": 0.2185,
+          "cadKg": 0.665,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 437.0,
+        "usdLb": 0.2185,
+        "cadKg": 0.665,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Pears, Processing"
+    },
+    "plums_process": {
+      "id": "plums_process",
+      "crop": "Plums",
+      "short": "PLUMS, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 1,
+      "monthly": [
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 415.0,
+          "usdLb": 0.2075,
+          "cadKg": 0.632,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2019,
+        "m": 12,
+        "d": "2019-12-01",
+        "raw": 415.0,
+        "usdLb": 0.2075,
+        "cadKg": 0.632,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Plums, Processing"
+    },
+    "cherries_sweet_process": {
+      "id": "cherries_sweet_process",
+      "crop": "Cherries",
+      "short": "CHERRIES, SWEET, PROCESSING - PRICE RECEIVED, MEASURED IN $ / TON",
+      "freq": "ANNUAL",
+      "unit": "ton",
+      "n": 57,
+      "monthly": [
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 616.0,
+          "usdLb": 0.308,
+          "cadKg": 0.938,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 527.0,
+          "usdLb": 0.2635,
+          "cadKg": 0.802,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 518.0,
+          "usdLb": 0.259,
+          "cadKg": 0.789,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 439.0,
+          "usdLb": 0.2195,
+          "cadKg": 0.668,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 486.0,
+          "usdLb": 0.243,
+          "cadKg": 0.74,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 538.0,
+          "usdLb": 0.269,
+          "cadKg": 0.819,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 761.0,
+          "usdLb": 0.3805,
+          "cadKg": 1.159,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 809.0,
+          "usdLb": 0.4045,
+          "cadKg": 1.232,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 676.0,
+          "usdLb": 0.338,
+          "cadKg": 1.029,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 684.0,
+          "usdLb": 0.342,
+          "cadKg": 1.041,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 570.0,
+          "usdLb": 0.285,
+          "cadKg": 0.868,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 652.0,
+          "usdLb": 0.326,
+          "cadKg": 0.993,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 658.0,
+          "usdLb": 0.329,
+          "cadKg": 1.002,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 657.0,
+          "usdLb": 0.3285,
+          "cadKg": 1.0,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 625.0,
+          "usdLb": 0.3125,
+          "cadKg": 0.952,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 653.0,
+          "usdLb": 0.3265,
+          "cadKg": 0.994,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 619.0,
+          "usdLb": 0.3095,
+          "cadKg": 0.942,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 744.0,
+          "usdLb": 0.372,
+          "cadKg": 1.133,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 731.0,
+          "usdLb": 0.3655,
+          "cadKg": 1.113,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 747.0,
+          "usdLb": 0.3735,
+          "cadKg": 1.137,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 747.0,
+        "usdLb": 0.3735,
+        "cadKg": 1.137,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Cherries, Sweet, Processing"
+    },
+    "cherries_tart_process": {
+      "id": "cherries_tart_process",
+      "crop": "Cherries",
+      "short": "CHERRIES, TART, PROCESSING - PRICE RECEIVED, MEASURED IN $ / LB",
+      "freq": "ANNUAL",
+      "unit": "lb",
+      "n": 57,
+      "monthly": [
+        {
+          "y": 2006,
+          "m": 12,
+          "d": "2006-12-01",
+          "raw": 0.211,
+          "usdLb": 0.211,
+          "cadKg": 0.642,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2007,
+          "m": 12,
+          "d": "2007-12-01",
+          "raw": 0.268,
+          "usdLb": 0.268,
+          "cadKg": 0.816,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2008,
+          "m": 12,
+          "d": "2008-12-01",
+          "raw": 0.372,
+          "usdLb": 0.372,
+          "cadKg": 1.133,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2009,
+          "m": 12,
+          "d": "2009-12-01",
+          "raw": 0.189,
+          "usdLb": 0.189,
+          "cadKg": 0.575,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2010,
+          "m": 12,
+          "d": "2010-12-01",
+          "raw": 0.218,
+          "usdLb": 0.218,
+          "cadKg": 0.664,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2011,
+          "m": 12,
+          "d": "2011-12-01",
+          "raw": 0.298,
+          "usdLb": 0.298,
+          "cadKg": 0.907,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2012,
+          "m": 12,
+          "d": "2012-12-01",
+          "raw": 0.588,
+          "usdLb": 0.588,
+          "cadKg": 1.79,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2013,
+          "m": 12,
+          "d": "2013-12-01",
+          "raw": 0.353,
+          "usdLb": 0.353,
+          "cadKg": 1.075,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2014,
+          "m": 12,
+          "d": "2014-12-01",
+          "raw": 0.35,
+          "usdLb": 0.35,
+          "cadKg": 1.066,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2015,
+          "m": 12,
+          "d": "2015-12-01",
+          "raw": 0.342,
+          "usdLb": 0.342,
+          "cadKg": 1.041,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2016,
+          "m": 12,
+          "d": "2016-12-01",
+          "raw": 0.271,
+          "usdLb": 0.271,
+          "cadKg": 0.825,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2017,
+          "m": 12,
+          "d": "2017-12-01",
+          "raw": 0.219,
+          "usdLb": 0.219,
+          "cadKg": 0.667,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2018,
+          "m": 12,
+          "d": "2018-12-01",
+          "raw": 0.193,
+          "usdLb": 0.193,
+          "cadKg": 0.588,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2019,
+          "m": 12,
+          "d": "2019-12-01",
+          "raw": 0.147,
+          "usdLb": 0.147,
+          "cadKg": 0.448,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2020,
+          "m": 12,
+          "d": "2020-12-01",
+          "raw": 0.377,
+          "usdLb": 0.377,
+          "cadKg": 1.148,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 0.495,
+          "usdLb": 0.495,
+          "cadKg": 1.507,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 0.218,
+          "usdLb": 0.218,
+          "cadKg": 0.664,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 0.193,
+          "usdLb": 0.193,
+          "cadKg": 0.588,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 0.199,
+          "usdLb": 0.199,
+          "cadKg": 0.606,
+          "period": "MARKETING YEAR"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 0.466,
+          "usdLb": 0.466,
+          "cadKg": 1.419,
+          "period": "MARKETING YEAR"
+        }
+      ],
+      "latest": {
+        "y": 2025,
+        "m": 12,
+        "d": "2025-12-01",
+        "raw": 0.466,
+        "usdLb": 0.466,
+        "cadKg": 1.419,
+        "period": "MARKETING YEAR"
+      },
+      "label": "Cherries, Tart, Processing"
+    },
+    "beans_dry": {
+      "id": "beans_dry",
+      "crop": "Beans",
+      "short": "BEANS, DRY EDIBLE, (EXCL CHICKPEAS) - PRICE RECEIVED, MEASURED IN $ / CWT",
+      "freq": "MONTHLY",
+      "unit": "cwt",
+      "n": 83,
+      "monthly": [
+        {
+          "y": 2023,
+          "m": 8,
+          "d": "2023-08-01",
+          "raw": 37.7,
+          "usdLb": 0.377,
+          "cadKg": 1.148,
+          "period": "AUG"
+        },
+        {
+          "y": 2023,
+          "m": 9,
+          "d": "2023-09-01",
+          "raw": 39.1,
+          "usdLb": 0.391,
+          "cadKg": 1.191,
+          "period": "SEP"
+        },
+        {
+          "y": 2023,
+          "m": 10,
+          "d": "2023-10-01",
+          "raw": 42.2,
+          "usdLb": 0.422,
+          "cadKg": 1.285,
+          "period": "OCT"
+        },
+        {
+          "y": 2023,
+          "m": 11,
+          "d": "2023-11-01",
+          "raw": 41.5,
+          "usdLb": 0.415,
+          "cadKg": 1.264,
+          "period": "NOV"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 42.7,
+          "usdLb": 0.427,
+          "cadKg": 1.3,
+          "period": "DEC"
+        },
+        {
+          "y": 2024,
+          "m": 1,
+          "d": "2024-01-01",
+          "raw": 41.7,
+          "usdLb": 0.417,
+          "cadKg": 1.27,
+          "period": "JAN"
+        },
+        {
+          "y": 2024,
+          "m": 2,
+          "d": "2024-02-01",
+          "raw": 42.0,
+          "usdLb": 0.42,
+          "cadKg": 1.279,
+          "period": "FEB"
+        },
+        {
+          "y": 2024,
+          "m": 3,
+          "d": "2024-03-01",
+          "raw": 42.3,
+          "usdLb": 0.423,
+          "cadKg": 1.288,
+          "period": "MAR"
+        },
+        {
+          "y": 2024,
+          "m": 4,
+          "d": "2024-04-01",
+          "raw": 45.3,
+          "usdLb": 0.453,
+          "cadKg": 1.379,
+          "period": "APR"
+        },
+        {
+          "y": 2024,
+          "m": 5,
+          "d": "2024-05-01",
+          "raw": 49.5,
+          "usdLb": 0.495,
+          "cadKg": 1.507,
+          "period": "MAY"
+        },
+        {
+          "y": 2024,
+          "m": 6,
+          "d": "2024-06-01",
+          "raw": 40.4,
+          "usdLb": 0.404,
+          "cadKg": 1.23,
+          "period": "JUN"
+        },
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "raw": 40.5,
+          "usdLb": 0.405,
+          "cadKg": 1.233,
+          "period": "JUL"
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "raw": 45.4,
+          "usdLb": 0.454,
+          "cadKg": 1.382,
+          "period": "AUG"
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "raw": 38.4,
+          "usdLb": 0.384,
+          "cadKg": 1.169,
+          "period": "SEP"
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "raw": 38.2,
+          "usdLb": 0.382,
+          "cadKg": 1.163,
+          "period": "OCT"
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "raw": 37.3,
+          "usdLb": 0.373,
+          "cadKg": 1.136,
+          "period": "NOV"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 38.0,
+          "usdLb": 0.38,
+          "cadKg": 1.157,
+          "period": "DEC"
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "raw": 38.7,
+          "usdLb": 0.387,
+          "cadKg": 1.178,
+          "period": "JAN"
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "raw": 36.2,
+          "usdLb": 0.362,
+          "cadKg": 1.102,
+          "period": "FEB"
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "raw": 33.5,
+          "usdLb": 0.335,
+          "cadKg": 1.02,
+          "period": "MAR"
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "raw": 34.0,
+          "usdLb": 0.34,
+          "cadKg": 1.035,
+          "period": "APR"
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "raw": 32.0,
+          "usdLb": 0.32,
+          "cadKg": 0.974,
+          "period": "MAY"
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "raw": 33.4,
+          "usdLb": 0.334,
+          "cadKg": 1.017,
+          "period": "JUN"
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "raw": 31.7,
+          "usdLb": 0.317,
+          "cadKg": 0.965,
+          "period": "JUL"
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "raw": 32.0,
+          "usdLb": 0.32,
+          "cadKg": 0.974,
+          "period": "AUG"
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "raw": 28.1,
+          "usdLb": 0.281,
+          "cadKg": 0.856,
+          "period": "SEP"
+        },
+        {
+          "y": 2025,
+          "m": 10,
+          "d": "2025-10-01",
+          "raw": 29.0,
+          "usdLb": 0.29,
+          "cadKg": 0.883,
+          "period": "OCT"
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "raw": 36.0,
+          "usdLb": 0.36,
+          "cadKg": 1.096,
+          "period": "NOV"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 32.3,
+          "usdLb": 0.323,
+          "cadKg": 0.984,
+          "period": "DEC"
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "raw": 31.2,
+          "usdLb": 0.312,
+          "cadKg": 0.95,
+          "period": "JAN"
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "raw": 29.9,
+          "usdLb": 0.299,
+          "cadKg": 0.91,
+          "period": "FEB"
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "raw": 27.7,
+          "usdLb": 0.277,
+          "cadKg": 0.843,
+          "period": "MAR"
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "raw": 27.7,
+          "usdLb": 0.277,
+          "cadKg": 0.843,
+          "period": "APR"
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "raw": 29.6,
+          "usdLb": 0.296,
+          "cadKg": 0.901,
+          "period": "MAY"
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "raw": 30.1,
+          "usdLb": 0.301,
+          "cadKg": 0.917,
+          "period": "JUN"
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "raw": 34.1,
+          "usdLb": 0.341,
+          "cadKg": 1.038,
+          "period": "JUL"
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "raw": 34.1,
+        "usdLb": 0.341,
+        "cadKg": 1.038,
+        "period": "JUL"
+      },
+      "label": "Beans, Dry Edible, (Excl Chickpeas)"
+    },
+    "oranges_process": {
+      "id": "oranges_process",
+      "crop": "Oranges",
+      "short": "ORANGES, PROCESSING - PRICE RECEIVED, MEASURED IN $ / BOX, ON TREE EQUIV",
+      "freq": "MONTHLY",
+      "unit": "box90",
+      "n": 210,
+      "monthly": [
+        {
+          "y": 2021,
+          "m": 2,
+          "d": "2021-02-01",
+          "raw": 4.94,
+          "usdLb": 0.0549,
+          "cadKg": 0.167,
+          "period": "FEB"
+        },
+        {
+          "y": 2021,
+          "m": 3,
+          "d": "2021-03-01",
+          "raw": 7.76,
+          "usdLb": 0.0862,
+          "cadKg": 0.263,
+          "period": "MAR"
+        },
+        {
+          "y": 2021,
+          "m": 4,
+          "d": "2021-04-01",
+          "raw": 8.26,
+          "usdLb": 0.0918,
+          "cadKg": 0.279,
+          "period": "APR"
+        },
+        {
+          "y": 2021,
+          "m": 5,
+          "d": "2021-05-01",
+          "raw": 8.07,
+          "usdLb": 0.0897,
+          "cadKg": 0.273,
+          "period": "MAY"
+        },
+        {
+          "y": 2021,
+          "m": 11,
+          "d": "2021-11-01",
+          "raw": 1.79,
+          "usdLb": 0.0199,
+          "cadKg": 0.061,
+          "period": "NOV"
+        },
+        {
+          "y": 2021,
+          "m": 12,
+          "d": "2021-12-01",
+          "raw": 6.35,
+          "usdLb": 0.0706,
+          "cadKg": 0.215,
+          "period": "DEC"
+        },
+        {
+          "y": 2022,
+          "m": 1,
+          "d": "2022-01-01",
+          "raw": 6.62,
+          "usdLb": 0.0736,
+          "cadKg": 0.224,
+          "period": "JAN"
+        },
+        {
+          "y": 2022,
+          "m": 2,
+          "d": "2022-02-01",
+          "raw": 6.89,
+          "usdLb": 0.0766,
+          "cadKg": 0.233,
+          "period": "FEB"
+        },
+        {
+          "y": 2022,
+          "m": 3,
+          "d": "2022-03-01",
+          "raw": 7.25,
+          "usdLb": 0.0806,
+          "cadKg": 0.245,
+          "period": "MAR"
+        },
+        {
+          "y": 2022,
+          "m": 4,
+          "d": "2022-04-01",
+          "raw": 7.62,
+          "usdLb": 0.0847,
+          "cadKg": 0.258,
+          "period": "APR"
+        },
+        {
+          "y": 2022,
+          "m": 5,
+          "d": "2022-05-01",
+          "raw": 6.14,
+          "usdLb": 0.0682,
+          "cadKg": 0.208,
+          "period": "MAY"
+        },
+        {
+          "y": 2022,
+          "m": 10,
+          "d": "2022-10-01",
+          "raw": 3.32,
+          "usdLb": 0.0369,
+          "cadKg": 0.112,
+          "period": "OCT"
+        },
+        {
+          "y": 2022,
+          "m": 12,
+          "d": "2022-12-01",
+          "raw": 5.92,
+          "usdLb": 0.0658,
+          "cadKg": 0.2,
+          "period": "DEC"
+        },
+        {
+          "y": 2023,
+          "m": 1,
+          "d": "2023-01-01",
+          "raw": 3.0,
+          "usdLb": 0.0333,
+          "cadKg": 0.101,
+          "period": "JAN"
+        },
+        {
+          "y": 2023,
+          "m": 3,
+          "d": "2023-03-01",
+          "raw": 5.5,
+          "usdLb": 0.0611,
+          "cadKg": 0.186,
+          "period": "MAR"
+        },
+        {
+          "y": 2023,
+          "m": 4,
+          "d": "2023-04-01",
+          "raw": 5.88,
+          "usdLb": 0.0653,
+          "cadKg": 0.199,
+          "period": "APR"
+        },
+        {
+          "y": 2023,
+          "m": 5,
+          "d": "2023-05-01",
+          "raw": 1.96,
+          "usdLb": 0.0218,
+          "cadKg": 0.066,
+          "period": "MAY"
+        },
+        {
+          "y": 2023,
+          "m": 6,
+          "d": "2023-06-01",
+          "raw": 0.37,
+          "usdLb": 0.0041,
+          "cadKg": 0.013,
+          "period": "JUN"
+        },
+        {
+          "y": 2023,
+          "m": 12,
+          "d": "2023-12-01",
+          "raw": 6.85,
+          "usdLb": 0.0761,
+          "cadKg": 0.232,
+          "period": "DEC"
+        },
+        {
+          "y": 2024,
+          "m": 1,
+          "d": "2024-01-01",
+          "raw": 6.34,
+          "usdLb": 0.0704,
+          "cadKg": 0.214,
+          "period": "JAN"
+        },
+        {
+          "y": 2024,
+          "m": 2,
+          "d": "2024-02-01",
+          "raw": 7.93,
+          "usdLb": 0.0881,
+          "cadKg": 0.268,
+          "period": "FEB"
+        },
+        {
+          "y": 2024,
+          "m": 3,
+          "d": "2024-03-01",
+          "raw": 11.61,
+          "usdLb": 0.129,
+          "cadKg": 0.393,
+          "period": "MAR"
+        },
+        {
+          "y": 2024,
+          "m": 4,
+          "d": "2024-04-01",
+          "raw": 8.57,
+          "usdLb": 0.0952,
+          "cadKg": 0.29,
+          "period": "APR"
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "raw": 15.33,
+          "usdLb": 0.1703,
+          "cadKg": 0.519,
+          "period": "DEC"
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "raw": 15.07,
+          "usdLb": 0.1674,
+          "cadKg": 0.51,
+          "period": "JAN"
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "raw": 13.11,
+          "usdLb": 0.1457,
+          "cadKg": 0.444,
+          "period": "FEB"
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "raw": 17.13,
+          "usdLb": 0.1903,
+          "cadKg": 0.58,
+          "period": "MAR"
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "raw": 17.11,
+          "usdLb": 0.1901,
+          "cadKg": 0.579,
+          "period": "APR"
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "raw": 10.0,
+          "usdLb": 0.1111,
+          "cadKg": 0.338,
+          "period": "MAY"
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "raw": 3.67,
+          "usdLb": 0.0408,
+          "cadKg": 0.124,
+          "period": "NOV"
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "raw": 8.26,
+          "usdLb": 0.0918,
+          "cadKg": 0.279,
+          "period": "DEC"
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "raw": 9.54,
+          "usdLb": 0.106,
+          "cadKg": 0.323,
+          "period": "JAN"
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "raw": 10.17,
+          "usdLb": 0.113,
+          "cadKg": 0.344,
+          "period": "FEB"
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "raw": 10.42,
+          "usdLb": 0.1158,
+          "cadKg": 0.353,
+          "period": "MAR"
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "raw": 10.64,
+          "usdLb": 0.1182,
+          "cadKg": 0.36,
+          "period": "APR"
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "raw": 7.19,
+          "usdLb": 0.0799,
+          "cadKg": 0.243,
+          "period": "MAY"
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 5,
+        "d": "2026-05-01",
+        "raw": 7.19,
+        "usdLb": 0.0799,
+        "cadKg": 0.243,
+        "period": "MAY"
+      },
+      "label": "Oranges, Processing"
+    }
+  },
+  "bls": {
+    "bananas_retail": {
+      "id": "APU0000711211",
+      "crop": "Bananas",
+      "kind": "fresh",
+      "label": "Bananas, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 0.613,
+          "cadKg": 1.867
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 0.612,
+          "cadKg": 1.864
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 0.617,
+          "cadKg": 1.879
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 0.619,
+          "cadKg": 1.885
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 0.622,
+          "cadKg": 1.894
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 0.615,
+          "cadKg": 1.873
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 0.621,
+          "cadKg": 1.891
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 0.619,
+          "cadKg": 1.885
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 0.625,
+          "cadKg": 1.903
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 0.635,
+          "cadKg": 1.934
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 0.655,
+          "cadKg": 1.994
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 0.654,
+          "cadKg": 1.991
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 0.657,
+          "cadKg": 2.001
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 0.666,
+          "cadKg": 2.028
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 0.67,
+          "cadKg": 2.04
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 0.664,
+          "cadKg": 2.022
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 0.656,
+          "cadKg": 1.997
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 0.653,
+          "cadKg": 1.988
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 0.653,
+          "cadKg": 1.988
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 0.657,
+          "cadKg": 2.001
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 0.654,
+          "cadKg": 1.991
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 0.646,
+          "cadKg": 1.967
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 0.645,
+          "cadKg": 1.964
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 0.65,
+          "cadKg": 1.979
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 0.65,
+        "cadKg": 1.979
+      }
+    },
+    "oranges_retail": {
+      "id": "APU0000711311",
+      "crop": "Oranges",
+      "kind": "fresh",
+      "label": "Navel oranges, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 4,
+          "d": "2024-04-01",
+          "usdLb": 1.475,
+          "cadKg": 4.491
+        },
+        {
+          "y": 2024,
+          "m": 5,
+          "d": "2024-05-01",
+          "usdLb": 1.545,
+          "cadKg": 4.704
+        },
+        {
+          "y": 2024,
+          "m": 6,
+          "d": "2024-06-01",
+          "usdLb": 1.582,
+          "cadKg": 4.817
+        },
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.627,
+          "cadKg": 4.954
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.728,
+          "cadKg": 5.262
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.733,
+          "cadKg": 5.277
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 1.805,
+          "cadKg": 5.496
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 1.729,
+          "cadKg": 5.265
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 1.564,
+          "cadKg": 4.762
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 1.531,
+          "cadKg": 4.662
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 1.536,
+          "cadKg": 4.677
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 1.484,
+          "cadKg": 4.519
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 1.485,
+          "cadKg": 4.522
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 1.564,
+          "cadKg": 4.762
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 1.633,
+          "cadKg": 4.972
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.795,
+          "cadKg": 5.466
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.803,
+          "cadKg": 5.49
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 1.57,
+          "cadKg": 4.781
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 1.536,
+          "cadKg": 4.677
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 1.508,
+          "cadKg": 4.592
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 1.483,
+          "cadKg": 4.516
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 1.504,
+          "cadKg": 4.58
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 1.542,
+          "cadKg": 4.695
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 1.54,
+          "cadKg": 4.689
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 6,
+        "d": "2026-06-01",
+        "usdLb": 1.54,
+        "cadKg": 4.689
+      }
+    },
+    "potatoes_retail": {
+      "id": "APU0000712112",
+      "crop": "Potatoes",
+      "kind": "fresh",
+      "label": "White potatoes, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 6,
+          "d": "2024-06-01",
+          "usdLb": 0.993,
+          "cadKg": 3.024
+        },
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.017,
+          "cadKg": 3.097
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.006,
+          "cadKg": 3.063
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.009,
+          "cadKg": 3.072
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 0.998,
+          "cadKg": 3.039
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 0.956,
+          "cadKg": 2.911
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 0.949,
+          "cadKg": 2.89
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 0.973,
+          "cadKg": 2.963
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 0.957,
+          "cadKg": 2.914
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 0.95,
+          "cadKg": 2.893
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 0.967,
+          "cadKg": 2.944
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 0.958,
+          "cadKg": 2.917
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 0.981,
+          "cadKg": 2.987
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 0.978,
+          "cadKg": 2.978
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.001,
+          "cadKg": 3.048
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.014,
+          "cadKg": 3.088
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 0.847,
+          "cadKg": 2.579
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 0.871,
+          "cadKg": 2.652
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 0.866,
+          "cadKg": 2.637
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 0.847,
+          "cadKg": 2.579
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 0.86,
+          "cadKg": 2.619
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 0.894,
+          "cadKg": 2.722
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 0.923,
+          "cadKg": 2.81
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 0.942,
+          "cadKg": 2.868
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 0.942,
+        "cadKg": 2.868
+      }
+    },
+    "lettuce_retail": {
+      "id": "APU0000712211",
+      "crop": "Lettuce",
+      "kind": "fresh",
+      "label": "Iceberg lettuce, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 5,
+          "d": "2024-05-01",
+          "usdLb": 1.692,
+          "cadKg": 5.152
+        },
+        {
+          "y": 2024,
+          "m": 6,
+          "d": "2024-06-01",
+          "usdLb": 1.741,
+          "cadKg": 5.301
+        },
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.643,
+          "cadKg": 5.003
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.517,
+          "cadKg": 4.619
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.435,
+          "cadKg": 4.369
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 1.414,
+          "cadKg": 4.306
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 1.641,
+          "cadKg": 4.997
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 1.705,
+          "cadKg": 5.192
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 1.618,
+          "cadKg": 4.927
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 1.522,
+          "cadKg": 4.634
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 1.465,
+          "cadKg": 4.461
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 1.515,
+          "cadKg": 4.613
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 1.438,
+          "cadKg": 4.379
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 1.378,
+          "cadKg": 4.196
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 1.579,
+          "cadKg": 4.808
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.673,
+          "cadKg": 5.094
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.731,
+          "cadKg": 5.271
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 1.987,
+          "cadKg": 6.05
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 1.699,
+          "cadKg": 5.173
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 1.719,
+          "cadKg": 5.234
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 1.629,
+          "cadKg": 4.96
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 1.964,
+          "cadKg": 5.98
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 2.012,
+          "cadKg": 6.126
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 1.753,
+          "cadKg": 5.338
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 1.753,
+        "cadKg": 5.338
+      }
+    },
+    "tomatoes_retail": {
+      "id": "APU0000712311",
+      "crop": "Tomatoes",
+      "kind": "fresh",
+      "label": "Field tomatoes, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.945,
+          "cadKg": 5.922
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.996,
+          "cadKg": 6.078
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.936,
+          "cadKg": 5.895
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 1.98,
+          "cadKg": 6.029
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 2.03,
+          "cadKg": 6.181
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 2.067,
+          "cadKg": 6.294
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 2.05,
+          "cadKg": 6.242
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 1.848,
+          "cadKg": 5.627
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 1.819,
+          "cadKg": 5.539
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 1.793,
+          "cadKg": 5.46
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 1.705,
+          "cadKg": 5.192
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 1.737,
+          "cadKg": 5.289
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 1.793,
+          "cadKg": 5.46
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.925,
+          "cadKg": 5.862
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.91,
+          "cadKg": 5.816
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 1.828,
+          "cadKg": 5.566
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 1.84,
+          "cadKg": 5.603
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 1.791,
+          "cadKg": 5.453
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 1.902,
+          "cadKg": 5.791
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 2.255,
+          "cadKg": 6.866
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 2.689,
+          "cadKg": 8.188
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 2.489,
+          "cadKg": 7.579
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 2.154,
+          "cadKg": 6.559
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 2.003,
+          "cadKg": 6.099
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 2.003,
+        "cadKg": 6.099
+      }
+    },
+    "oj_frozen_retail": {
+      "id": "APU0000713111",
+      "crop": "Oranges",
+      "kind": "frozen",
+      "label": "Frozen orange-juice concentrate (per 16 oz)",
+      "unit": "usdPer16oz",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 4.248,
+          "cadKg": 12.935
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 4.273,
+          "cadKg": 13.011
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 4.227,
+          "cadKg": 12.871
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 4.247,
+          "cadKg": 12.932
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 4.306,
+          "cadKg": 13.112
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 4.289,
+          "cadKg": 13.06
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 4.48,
+          "cadKg": 13.641
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 4.492,
+          "cadKg": 13.678
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 4.482,
+          "cadKg": 13.647
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 4.44,
+          "cadKg": 13.52
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 4.429,
+          "cadKg": 13.486
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 4.493,
+          "cadKg": 13.681
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 4.641,
+          "cadKg": 14.132
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 4.67,
+          "cadKg": 14.22
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 4.736,
+          "cadKg": 14.421
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 4.806,
+          "cadKg": 14.634
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 4.821,
+          "cadKg": 14.68
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 4.871,
+          "cadKg": 14.832
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 4.863,
+          "cadKg": 14.808
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 4.886,
+          "cadKg": 14.878
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 4.903,
+          "cadKg": 14.929
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 4.97,
+          "cadKg": 15.133
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 4.874,
+          "cadKg": 14.841
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 4.817,
+          "cadKg": 14.667
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 4.817,
+        "cadKg": 14.667
+      }
+    },
+    "corn_canned_retail": {
+      "id": "APU0000714221",
+      "crop": "Sweet Corn",
+      "kind": "canned",
+      "label": "Canned corn, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.366,
+          "cadKg": 4.159
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.311,
+          "cadKg": 3.992
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.35,
+          "cadKg": 4.111
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 1.33,
+          "cadKg": 4.05
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 1.294,
+          "cadKg": 3.94
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 1.304,
+          "cadKg": 3.971
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 1.33,
+          "cadKg": 4.05
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 1.351,
+          "cadKg": 4.114
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 1.341,
+          "cadKg": 4.083
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 1.331,
+          "cadKg": 4.053
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 1.446,
+          "cadKg": 4.403
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 1.414,
+          "cadKg": 4.306
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 1.415,
+          "cadKg": 4.309
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.4,
+          "cadKg": 4.263
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.422,
+          "cadKg": 4.33
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 1.174,
+          "cadKg": 3.575
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 1.164,
+          "cadKg": 3.544
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 1.298,
+          "cadKg": 3.952
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 1.312,
+          "cadKg": 3.995
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 1.311,
+          "cadKg": 3.992
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 1.293,
+          "cadKg": 3.937
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 1.315,
+          "cadKg": 4.004
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 1.286,
+          "cadKg": 3.916
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 1.284,
+          "cadKg": 3.91
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 1.284,
+        "cadKg": 3.91
+      }
+    },
+    "beans_dry_retail": {
+      "id": "APU0000714233",
+      "crop": "Beans",
+      "kind": "dried",
+      "label": "Dried beans, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 1.713,
+          "cadKg": 5.216
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 1.711,
+          "cadKg": 5.21
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.705,
+          "cadKg": 5.192
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 1.678,
+          "cadKg": 5.109
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 1.651,
+          "cadKg": 5.027
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 1.655,
+          "cadKg": 5.039
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 1.654,
+          "cadKg": 5.036
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 1.631,
+          "cadKg": 4.966
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 1.64,
+          "cadKg": 4.994
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 1.674,
+          "cadKg": 5.097
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 1.669,
+          "cadKg": 5.082
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 1.588,
+          "cadKg": 4.835
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 1.649,
+          "cadKg": 5.021
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 1.547,
+          "cadKg": 4.711
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 1.629,
+          "cadKg": 4.96
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 1.686,
+          "cadKg": 5.134
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 1.689,
+          "cadKg": 5.143
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 1.702,
+          "cadKg": 5.182
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 1.704,
+          "cadKg": 5.189
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 1.696,
+          "cadKg": 5.164
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 1.705,
+          "cadKg": 5.192
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 1.669,
+          "cadKg": 5.082
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 1.626,
+          "cadKg": 4.951
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 1.689,
+          "cadKg": 5.143
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 1.689,
+        "cadKg": 5.143
+      }
+    },
+    "apples_retail": {
+      "id": "APU0000FN1101",
+      "crop": "Apples",
+      "kind": "fresh",
+      "label": "Apples, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 2.087,
+          "cadKg": 6.355
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 2.056,
+          "cadKg": 6.26
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 1.998,
+          "cadKg": 6.084
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 2.032,
+          "cadKg": 6.187
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 1.982,
+          "cadKg": 6.035
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 1.845,
+          "cadKg": 5.618
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 2.093,
+          "cadKg": 6.373
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 2.101,
+          "cadKg": 6.397
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 2.103,
+          "cadKg": 6.404
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 2.104,
+          "cadKg": 6.407
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 2.129,
+          "cadKg": 6.483
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 2.183,
+          "cadKg": 6.647
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 2.199,
+          "cadKg": 6.696
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 2.208,
+          "cadKg": 6.723
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 2.234,
+          "cadKg": 6.802
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 2.093,
+          "cadKg": 6.373
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 1.975,
+          "cadKg": 6.014
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 2.115,
+          "cadKg": 6.44
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 2.215,
+          "cadKg": 6.745
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 2.204,
+          "cadKg": 6.711
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 2.246,
+          "cadKg": 6.839
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 2.195,
+          "cadKg": 6.684
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 2.196,
+          "cadKg": 6.687
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 2.265,
+          "cadKg": 6.897
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 2.265,
+        "cadKg": 6.897
+      }
+    },
+    "berries_retail": {
+      "id": "APU0000FS1101",
+      "crop": "Strawberries",
+      "kind": "fresh",
+      "label": "Strawberries, grocery average",
+      "unit": "usdLb",
+      "n": 24,
+      "monthly": [
+        {
+          "y": 2024,
+          "m": 7,
+          "d": "2024-07-01",
+          "usdLb": 4.897,
+          "cadKg": 14.911
+        },
+        {
+          "y": 2024,
+          "m": 8,
+          "d": "2024-08-01",
+          "usdLb": 4.796,
+          "cadKg": 14.604
+        },
+        {
+          "y": 2024,
+          "m": 9,
+          "d": "2024-09-01",
+          "usdLb": 5.004,
+          "cadKg": 15.237
+        },
+        {
+          "y": 2024,
+          "m": 10,
+          "d": "2024-10-01",
+          "usdLb": 4.937,
+          "cadKg": 15.033
+        },
+        {
+          "y": 2024,
+          "m": 11,
+          "d": "2024-11-01",
+          "usdLb": 4.794,
+          "cadKg": 14.597
+        },
+        {
+          "y": 2024,
+          "m": 12,
+          "d": "2024-12-01",
+          "usdLb": 4.728,
+          "cadKg": 14.396
+        },
+        {
+          "y": 2025,
+          "m": 1,
+          "d": "2025-01-01",
+          "usdLb": 4.912,
+          "cadKg": 14.957
+        },
+        {
+          "y": 2025,
+          "m": 2,
+          "d": "2025-02-01",
+          "usdLb": 4.869,
+          "cadKg": 14.826
+        },
+        {
+          "y": 2025,
+          "m": 3,
+          "d": "2025-03-01",
+          "usdLb": 4.816,
+          "cadKg": 14.664
+        },
+        {
+          "y": 2025,
+          "m": 4,
+          "d": "2025-04-01",
+          "usdLb": 4.78,
+          "cadKg": 14.555
+        },
+        {
+          "y": 2025,
+          "m": 5,
+          "d": "2025-05-01",
+          "usdLb": 4.952,
+          "cadKg": 15.079
+        },
+        {
+          "y": 2025,
+          "m": 6,
+          "d": "2025-06-01",
+          "usdLb": 4.872,
+          "cadKg": 14.835
+        },
+        {
+          "y": 2025,
+          "m": 7,
+          "d": "2025-07-01",
+          "usdLb": 4.797,
+          "cadKg": 14.607
+        },
+        {
+          "y": 2025,
+          "m": 8,
+          "d": "2025-08-01",
+          "usdLb": 4.828,
+          "cadKg": 14.701
+        },
+        {
+          "y": 2025,
+          "m": 9,
+          "d": "2025-09-01",
+          "usdLb": 4.787,
+          "cadKg": 14.576
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "d": "2025-11-01",
+          "usdLb": 4.31,
+          "cadKg": 13.124
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "d": "2025-12-01",
+          "usdLb": 4.408,
+          "cadKg": 13.422
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "d": "2026-01-01",
+          "usdLb": 4.383,
+          "cadKg": 13.346
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "d": "2026-02-01",
+          "usdLb": 4.314,
+          "cadKg": 13.136
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "d": "2026-03-01",
+          "usdLb": 4.258,
+          "cadKg": 12.965
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "d": "2026-04-01",
+          "usdLb": 4.216,
+          "cadKg": 12.837
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "d": "2026-05-01",
+          "usdLb": 3.929,
+          "cadKg": 11.964
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "d": "2026-06-01",
+          "usdLb": 3.816,
+          "cadKg": 11.62
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "d": "2026-07-01",
+          "usdLb": 3.922,
+          "cadKg": 11.942
+        }
+      ],
+      "latest": {
+        "y": 2026,
+        "m": 7,
+        "d": "2026-07-01",
+        "usdLb": 3.922,
+        "cadKg": 11.942
+      }
+    }
+  },
+  "crops": {
+    "Apples": {
+      "read": "Juice apples are a public $/ton. Dried snack slices are a private plant. Extra-fancy Honeycrisp is not either of those.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh carton",
+          "tape": "fresh"
+        },
+        {
+          "id": "juice",
+          "kind": "juice",
+          "label": "Juice / peeler stock",
+          "nass": "apples_process",
+          "honest": "NASS processing, marketing year. Culls and peelers \u2014 not extra-fancy."
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Dried slices",
+          "tape": "none",
+          "honest": "No public dried-apple tape. Snack plants quote privately."
+        }
+      ]
+    },
+    "Strawberries": {
+      "read": "IQF / jam berries print as NASS processing. A clamshell is a different desk. No public IQF FOB.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh clamshell",
+          "tape": "fresh"
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "IQF / processing",
+          "nass": "strawberries_process",
+          "honest": "NASS processing cwt. The raw that goes into a freezer or jam kettle, not a Driscoll clamshell."
+        }
+      ]
+    },
+    "Grapes (Table)": {
+      "read": "Crush / juice grapes print as NASS processing $/ton (wine and juice mashed together). Raisin plants do not print a separate monthly tape here.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Table lug",
+          "tape": "fresh"
+        },
+        {
+          "id": "juice",
+          "kind": "juice",
+          "label": "Juice / wine crush",
+          "nass": "grapes_process",
+          "honest": "NASS processing $/ton. Mostly California crush, not a Thompson seedless carton."
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Raisins",
+          "tape": "none",
+          "honest": "Raisin bargaining is a co-op. No monthly public raisin pit on this desk."
+        }
+      ]
+    },
+    "Peaches": {
+      "read": "Canning peaches are a public $/ton. Fresh extra-fancy is a short summer window.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh carton",
+          "tape": "fresh"
+        },
+        {
+          "id": "canned",
+          "kind": "canned",
+          "label": "Canning / process",
+          "nass": "peaches_process",
+          "honest": "NASS processing $/ton. Cling canning stock, not a tree-ripe tray."
+        }
+      ]
+    },
+    "Pears": {
+      "read": "Bartlett process vs Anjou fresh. Processing prints yearly.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh carton",
+          "tape": "fresh"
+        },
+        {
+          "id": "canned",
+          "kind": "canned",
+          "label": "Canning / process",
+          "nass": "pears_process",
+          "honest": "NASS processing $/ton. Canners, not extra-fancy Anjou."
+        }
+      ]
+    },
+    "Tomatoes": {
+      "read": "California paste is the most transparent tomato tape after AMS fresh FOB. It is not a greenhouse cluster.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh round / cluster",
+          "tape": "fresh"
+        },
+        {
+          "id": "process",
+          "kind": "process",
+          "label": "Paste / dice plant",
+          "nass": "tomatoes_process",
+          "honest": "NASS processing $/ton (California paste). A 2025 marketing-year floor, not Nogales vine-ripe."
+        },
+        {
+          "id": "canned",
+          "kind": "canned",
+          "label": "Canned tomatoes",
+          "tape": "none",
+          "honest": "BLS used to print canned tomatoes; that grocery series is dead. Use paste farm-gate plus a plant quote."
+        }
+      ]
+    },
+    "Potatoes": {
+      "read": "Fry / chip stock prints as NASS processing. Frozen fries no longer have a BLS grocery average (ended 2005). Lamb Weston (LW) is the listed weather.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Tablestock",
+          "tape": "fresh"
+        },
+        {
+          "id": "process",
+          "kind": "process",
+          "label": "Fry / chip stock",
+          "nass": "potatoes_process",
+          "honest": "NASS processing cwt. Contract russets into a plant, not a 50-lb table bag."
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "Frozen fries",
+          "listed": [
+            "LW"
+          ],
+          "honest": "BLS frozen-fry grocery average ended in 2005. The public weather is Lamb Weston, not a fry FOB."
+        }
+      ]
+    },
+    "Onions": {
+      "read": "Dehydrated onion is a real industrial market with no public pit. Fresh storage onions print NASS + AAFC.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Yellow storage",
+          "tape": "fresh"
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Dehydrated",
+          "tape": "none",
+          "honest": "Dehy plants (California / Idaho) quote privately. No NASS dehydrated series on this desk."
+        }
+      ]
+    },
+    "Broccoli": {
+      "read": "IQF florets are a plant quote. Fresh crowns print NASS + AAFC.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Crown carton",
+          "tape": "fresh"
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "IQF florets",
+          "tape": "none",
+          "honest": "No public IQF broccoli FOB. Frozen mixed-veg is a private packer."
+        }
+      ]
+    },
+    "Carrots": {
+      "read": "Juice / jumbo vs cello. Grimmway / Bolthouse are private.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Cello / fresh",
+          "tape": "fresh"
+        },
+        {
+          "id": "juice",
+          "kind": "juice",
+          "label": "Jumbo / juice",
+          "tape": "none",
+          "honest": "No public carrot-juice tape. Two private firms dominate US fresh carrots."
+        }
+      ]
+    },
+    "Cucumbers": {
+      "read": "Pickle stock vs slicer vs English greenhouse \u2014 three businesses.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Slicer / English",
+          "tape": "fresh"
+        },
+        {
+          "id": "process",
+          "kind": "process",
+          "label": "Pickle stock",
+          "tape": "none",
+          "honest": "No current NASS pickle series on this desk. Brine plants quote privately."
+        }
+      ]
+    },
+    "Beans": {
+      "read": "Dry edible beans are one of the few produce substitutes with a real monthly public tape \u2014 storable, reported, comparable. Snap beans are a fresh carton.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Snap / fresh",
+          "tape": "fresh"
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Dry edible",
+          "nass": "beans_dry",
+          "bls": "beans_dry_retail",
+          "honest": "NASS dry-bean farm-gate, monthly. BLS grocery dried beans is the retail end. This is what transparent looks like."
+        }
+      ]
+    },
+    "Sweet Corn": {
+      "read": "Canned corn still prints a BLS grocery average. Fresh sweet corn is a short window.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh ear",
+          "tape": "fresh"
+        },
+        {
+          "id": "canned",
+          "kind": "canned",
+          "label": "Canned corn",
+          "bls": "corn_canned_retail",
+          "honest": "BLS canned corn, grocery average, monthly. Not a fresh ear, not a frozen cob."
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "Frozen cut / cob",
+          "tape": "none",
+          "honest": "No public IQF sweet-corn FOB on this desk."
+        }
+      ]
+    },
+    "Oranges": {
+      "read": "Frozen concentrated orange juice is the only fruit with a real futures pit (OJ=F). Fresh navels are a carton. Do not mix them.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh navel / Valencia",
+          "tape": "fresh"
+        },
+        {
+          "id": "juice",
+          "kind": "juice",
+          "label": "Processing oranges",
+          "nass": "oranges_process",
+          "honest": "NASS on-tree equivalent $/box (~90 lb). Juice fruit, not a gift carton."
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "FCOJ (frozen concentrate)",
+          "bls": "oj_frozen_retail",
+          "listed": [
+            "OJ=F",
+            "ALCO"
+          ],
+          "honest": "ICE FCOJ futures plus BLS frozen-concentrate grocery average. Not a fresh navel."
+        }
+      ]
+    },
+    "Plums": {
+      "read": "Prune / drying stock vs fresh plum. Processing prints yearly.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh plum",
+          "tape": "fresh"
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Prune / drying stock",
+          "nass": "plums_process",
+          "honest": "NASS plum processing $/ton. Not a fresh black plum lug."
+        }
+      ]
+    },
+    "Cherries": {
+      "read": "Tart cherries for pie/IQF print in $/lb. Sweet fresh is a short June desk.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Sweet fresh",
+          "tape": "fresh"
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "Tart / IQF / pie",
+          "nass": "cherries_tart_process",
+          "honest": "NASS tart processing $/lb. Pie and IQF, not a Northwest sweet lug."
+        },
+        {
+          "id": "process",
+          "kind": "process",
+          "label": "Sweet brining / process",
+          "nass": "cherries_sweet_process",
+          "honest": "NASS sweet processing $/ton."
+        }
+      ]
+    },
+    "Lettuce": {
+      "read": "Fresh-cut kits are not frozen lettuce. There is no public IQF iceberg tape.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Head / leaf",
+          "tape": "fresh"
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "Fresh-cut kit (not frozen)",
+          "tape": "none",
+          "honest": "Kits are a plant SKU (Taylor / Fresh Express, private). Frozen lettuce is a niche. Watch SYY, not a freezer print."
+        }
+      ]
+    },
+    "Bananas": {
+      "read": "Chips / puree are private. Fresh bananas are the only produce with a real world pink-sheet cousin \u2014 still not a pit.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh ripe",
+          "tape": "fresh"
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Chips / puree",
+          "tape": "none",
+          "honest": "Banana chips and puree are industrial quotes. Dole / Del Monte (DMC) are the listed weather."
+        }
+      ]
+    },
+    "Garlic": {
+      "read": "Dehydrated garlic is a large industrial market (China) with no clean public pit on this desk.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh bulb",
+          "tape": "fresh"
+        },
+        {
+          "id": "dried",
+          "kind": "dried",
+          "label": "Dehydrated",
+          "tape": "none",
+          "honest": "Dehy garlic is China industrial. No monthly USDA dehydrated series here."
+        }
+      ]
+    },
+    "Blueberries": {
+      "read": "IQF blueberries are a real trade. USDA does not print a clean monthly IQF FOB on this desk.",
+      "forms": [
+        {
+          "id": "fresh",
+          "kind": "fresh",
+          "label": "Fresh clamshell",
+          "tape": "fresh"
+        },
+        {
+          "id": "frozen",
+          "kind": "frozen",
+          "label": "IQF",
+          "tape": "none",
+          "honest": "IQF is a plant and import quote (Chile / Peru / GA). No NASS processing series pulled here."
+        }
+      ]
+    }
+  },
+  "defaultCrop": {
+    "read": "No listed frozen or dried public tape for this carton. IQF and dehy are plant quotes. Use fresh farm + AAFC wholesale, and do not pretend a freezer FOB exists.",
+    "forms": [
+      {
+        "id": "fresh",
+        "kind": "fresh",
+        "label": "Fresh",
+        "tape": "fresh"
+      },
+      {
+        "id": "frozen",
+        "kind": "frozen",
+        "label": "Frozen / IQF",
+        "tape": "none",
+        "honest": "No public IQF FOB for this item on the desk."
+      },
+      {
+        "id": "dried",
+        "kind": "dried",
+        "label": "Dried / dehydrated",
+        "tape": "none",
+        "honest": "No public dehydrated tape for this item on the desk."
+      }
+    ]
+  }
+}

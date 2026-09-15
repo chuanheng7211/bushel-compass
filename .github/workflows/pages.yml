@@ -27,6 +27,7 @@ jobs:
           NITRO_PRESET: static
           VITE_AUTH_ENABLED: "false"
         run: |
+          export PATH="$PWD/node_modules/.bin:$PATH"
           node scripts/with-app-env.mjs vite build || true
           test -f .output/public/index.html
           node scripts/rewrite-gh-pages.mjs

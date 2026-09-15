@@ -33,18 +33,18 @@ function rewrite(text) {
     .replaceAll("/data/", `${PREFIX}/data/`)
     .replaceAll('href="/origins"', `href="${PREFIX}/origins/"`)
     .replaceAll('href="/board"', `href="${PREFIX}/board/"`)
+    .replaceAll('href="/grocery"', `href="${PREFIX}/grocery/"`)
     .replaceAll('href="/world"', `href="${PREFIX}/world/"`)
     .replaceAll('href="/industry"', `href="${PREFIX}/industry/"`)
+    .replaceAll('href="/markets"', `href="${PREFIX}/markets/"`)
     .replaceAll('href="/"', `href="${PREFIX}/"`)
     .replaceAll("basepath:`/`", "basepath:`/bushel-compass`")
     .replaceAll("update({basepath:``", "update({basepath:`/bushel-compass`")
     .replaceAll("function(e){return`/`+e}", "function(e){return`/bushel-compass/`+e}");
-  if (extname) {
-    out = out
-      .replace(/<script class="\$tsr"[^>]*>[\s\S]*?<\/script>/g, "")
-      .replace(/<script type="module"[^>]*src="[^"]*index-[^"]+"[^>]*><\/script>/g, "")
-      .replace(/<link rel="modulepreload" href="[^"]*assets\/[^"]+"[^>]*\/?>/g, "");
-  }
+  out = out
+    .replace(/<script class="\$tsr"[^>]*>[\s\S]*?<\/script>/g, "")
+    .replace(/<script type="module"[^>]*src="[^"]*index-[^"]+"[^>]*><\/script>/g, "")
+    .replace(/<link rel="modulepreload" href="[^"]*assets\/[^"]+"[^>]*\/?>/g, "");
   return out;
 }
 

@@ -145,3 +145,105 @@ export type Analysis = {
   hist: MonthlyPt[];
   verdict: Verdict;
 };
+
+export type MarketLensId = "growers" | "inputs" | "freight" | "downstream" | "futures" | "fx";
+
+export type ListedName = {
+  symbol: string;
+  name: string;
+  role: string;
+  lens: MarketLensId | string;
+  what: string;
+  means: string;
+  crops: string[];
+  price: number | null;
+  chg: number | null;
+  chgPct: number | null;
+  prevClose: number | null;
+  currency: string | null;
+  asof: string | null;
+  ret1m: number | null;
+  ret3m: number | null;
+};
+
+export type CropTapeMap = {
+  tickers: string[];
+  futures: string[];
+  read: string;
+};
+
+export type MarketsFile = {
+  generated?: string;
+  source?: string;
+  thesis: string;
+  disclaimer: string;
+  lenses: { id: string; label: string; blurb: string }[];
+  relations: { if: string; then: string; watch: string[] }[];
+  crops: Record<string, CropTapeMap>;
+  defaultCrop: CropTapeMap;
+  universe: ListedName[];
+  history: Record<string, { d: string; p: number }[]>;
+  quoted?: number;
+  of?: number;
+};
+
+export type ProcessPt = {
+  y: number;
+  m: number;
+  d: string;
+  usdLb: number;
+  cadKg: number;
+  raw?: number;
+  period?: string;
+};
+
+export type ProcessSeries = {
+  id: string;
+  crop: string;
+  short?: string;
+  freq?: string;
+  unit?: string;
+  label?: string;
+  n?: number;
+  latest?: ProcessPt | null;
+  monthly?: ProcessPt[];
+};
+
+export type BlsSeries = {
+  id: string;
+  crop: string;
+  kind: string;
+  label: string;
+  unit?: string;
+  n?: number;
+  latest?: ProcessPt | null;
+  monthly?: ProcessPt[];
+};
+
+export type SubForm = {
+  id: string;
+  kind: string;
+  label: string;
+  tape?: string;
+  nass?: string;
+  bls?: string;
+  listed?: string[];
+  honest?: string;
+};
+
+export type ProcessCrop = {
+  read: string;
+  forms: SubForm[];
+};
+
+export type ProcessFile = {
+  generated?: string;
+  source?: string;
+  fxUsdCad?: number;
+  thesis: string;
+  disclaimer: string;
+  series: Record<string, ProcessSeries>;
+  bls: Record<string, BlsSeries>;
+  crops: Record<string, ProcessCrop>;
+  defaultCrop: ProcessCrop;
+};
