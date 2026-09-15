@@ -1,26 +1,45 @@
 # Bushel Compass
 
-Public-data compass for people walking into produce: USDA farm-gate, Canadian wholesale asks, origin map, cost stack, and own-vs-rent.
+Public-data desk for fresh produce. Paste a quote — or later, a grocery ticket — and walk it back to USDA farm-gate, Canadian wholesale, origin season, and whether you should own or rent the layer.
 
-## Live website
+**Not a flyer scrape. Not a cleared trade.** USDA NASS, AAFC InfoHort, FAO, delayed listed names.
 
-**[Open Bushel Compass](https://chuanheng7211.github.io/bushel-compass/)**
+## Live
 
-Source: [github.com/chuanheng7211/bushel-compass](https://github.com/chuanheng7211/bushel-compass)
+**[Open the desk](https://chuanheng7211.github.io/bushel-compass/)**
 
-Vercel production URL: [bushel-compass.vercel.app](https://bushel-compass.vercel.app) — auto-deploys from this repo after the Vercel GitHub App is granted access to it.
+That is the public site today (GitHub Pages). The source is this repo.
 
-## What’s on the desk
+Vercel is **not** serving this project yet. `bushel-compass.vercel.app` will go live after the Vercel GitHub App is granted on this repository.
 
-- **Compass** — paste a quote, six agents walk it back to farm / FOB / freight / retail
-- **Source map** — seasonal lanes into the GTA
-- **Dashboard** — regional asks, farm history, value chain, how the majors bench
-- **World** — FAO food index, produce belts, public tape vs experience
+## On the desk
 
-Data is public: USDA NASS (monthly farm-gate), AAFC InfoHort (weekly wholesale), FAO Food Price Index. Not a cleared trade. AMS shipping-point FOB is still the real North American tape and is not scraped yet.
+- **Compass** — paste a quote; six agents walk farm / FOB / freight / wholesale / retail
+- **Source map** — seasonal origin lanes into the GTA
+- **Sales chain** — regional asks, farm history, frozen/dried/juice as substitutes
+- **World** — FAO food index, produce belts, public tape vs a receiving dock
+- **Industry brief** — how majors actually bench the stack
 
-## Refresh prices
+Grocery shelf tracker + Instagram / 小红书 cards are in the next ship.
 
-GitHub Action **Refresh public produce data** runs Mondays. Set repo secret `NASS_API_KEY`.
+## Data
 
-Auth is off. No database required.
+| Source | What | Cadence |
+| --- | --- | --- |
+| USDA NASS | US farm-gate, all grades | Monthly |
+| AAFC InfoHort | Canadian destination wholesale + origin mix | Weekly |
+| FAO FPI | World food weather around the carton | Monthly |
+
+AMS shipping-point FOB is the real North American trade tape and is not scraped yet.
+
+GitHub Action **Refresh public produce data** runs Mondays. Set repo secret `NASS_API_KEY` for the farm series.
+
+Auth is off. No database. No ads.
+
+## Use it
+
+1. Open the live desk.
+2. Pick a crop. Read farm vs Vancouver wholesale.
+3. Play the source map if you care who packed this week.
+
+If you buy or sell produce and the public tape would help, open an issue with the crop and the city.
