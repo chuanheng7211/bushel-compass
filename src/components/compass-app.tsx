@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Compass, Globe, GitBranch, History, Layers, Landmark } from "lucide-react";
 import { analyzeQuote, fmt, forecastFor, fromCadKg, FX, paybackYears, seriesFor } from "@/lib/compass";
 import { layersFile, marketFile, nassFarm } from "@/lib/data";
@@ -13,6 +14,8 @@ import { SubstituteStrip } from "@/components/sales-chain";
 import { Movers } from "@/components/movers";
 import { Freshness } from "@/components/freshness";
 import { SiteHeader } from "@/components/site-header";
+import { DataLayers } from "@/components/data-layers";
+import { OriginFob } from "@/components/origin-fob";
 import { DeltaLine } from "@/components/delta-line";
 import { convertTypedPrice, useDeskMoney } from "@/lib/desk-money";
 import { useDesk } from "@/lib/desk-store";
@@ -116,10 +119,10 @@ export function CompassApp() {
       <SiteHeader />
       <section className="px-4 pt-6 sm:px-9">
         <h1 className="font-display text-3xl leading-tight tracking-tight sm:text-4xl">
-          A benchmark for people walking into produce.
+          Public prints for a carton of produce.
         </h1>
         <p className="mt-2 max-w-2xl text-sm text-ink-soft">
-          Click an item. Farm is USDA NASS. Ask is AAFC Vancouver wholesale. Then overwrite the quote with what they asked you.
+          Farm is USDA NASS. Ask is AAFC Vancouver. AMS truck is the public origin-to-city load. Implied FOB is dest minus that truck — not a reported district print. Grocery is BLS. Listed names are delayed. World is FAO.
         </p>
         <div className="mt-3">
           <Freshness />
@@ -132,6 +135,21 @@ export function CompassApp() {
 
       <section className="px-4 py-4 sm:px-9">
         <CropGrid value={cmd} onChange={pickCmd} />
+      </section>
+
+      <section className="px-4 pb-4 sm:px-9">
+        <DataLayers cmd={cmd} />
+        <div className="mt-4">
+          <OriginFob cmd={cmd} />
+        </div>
+        <p className="mt-3">
+          <Link
+            to="/order"
+            className="inline-flex min-h-11 items-center rounded-xl border border-line bg-cream px-4 text-sm font-medium text-ink no-underline"
+          >
+            How well dest tracks a delivered book →
+          </Link>
+        </p>
       </section>
 
       <section className="px-4 pb-2 sm:px-9">

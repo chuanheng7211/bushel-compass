@@ -25,6 +25,13 @@ export function SiteHeader({ kicker }: { kicker?: string }) {
             Compass
           </Link>
           <Link
+            to="/order"
+            className="rounded-xl border border-line bg-cream px-3 py-2 text-xs font-medium text-ink no-underline sm:px-4 sm:text-sm"
+            activeProps={{ className: "rounded-xl bg-ink px-3 py-2 text-xs font-medium text-paper no-underline sm:px-4 sm:text-sm" }}
+          >
+            Tape check
+          </Link>
+          <Link
             to="/origins"
             className="rounded-xl border border-line bg-cream px-3 py-2 text-xs font-medium text-ink no-underline sm:px-4 sm:text-sm"
             activeProps={{ className: "rounded-xl bg-ink px-3 py-2 text-xs font-medium text-paper no-underline sm:px-4 sm:text-sm" }}

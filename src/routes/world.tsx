@@ -9,10 +9,20 @@ import {
   YAxis,
 } from "recharts";
 import { SiteHeader } from "@/components/site-header";
+import { WorldFactors } from "@/components/world-factors";
+import { OriginFob } from "@/components/origin-fob";
 import worldJson from "@/data/world.json";
 import { marketFile, nassFarm } from "@/lib/data";
+import { worldCrops } from "@/lib/world-outlook";
 
-export const Route = createFileRoute("/world")({ component: WorldPage });
+type WorldSearch = { cmd?: string };
+
+export const Route = createFileRoute("/world")({
+  component: WorldPage,
+  validateSearch: (s: Record<string, unknown>): WorldSearch => ({
+    cmd: typeof s.cmd === "string" ? s.cmd : undefined,
+  }),
+});
 
 const world = worldJson as {
   generated?: string;
@@ -23,11 +33,13 @@ const world = worldJson as {
   series?: { d: string; food: number | null; cereals: number | null; oils: number | null; sugar: number | null }[];
   tapes?: { id: string; name: string; what: string; cadence: string; fresh: boolean }[];
   belts?: { belt: string; who: string; feeds: string; clock: string }[];
-  conditions?: { t: string; d: string }[];
-  howToUse?: string[];
 };
 
 function WorldPage() {
+  const { cmd: cmdQ } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const crops = worldCrops();
+  const cmd = cmdQ && crops.includes(cmdQ) ? cmdQ : "Apples";
   const chart = (world.series || []).filter((r) => r.food != null).map((r) => ({
     d: r.d.slice(0, 7),
     food: r.food,
@@ -39,17 +51,24 @@ function WorldPage() {
 
   return (
     <div className="min-h-dvh bg-paper text-ink">
-      <SiteHeader kicker="World staples, produce belts, and the difference between a public tape and a receiving dock." />
+      <SiteHeader kicker="Real FAO, dest, farm, diesel, FX — stacked into one landed look." />
       <section className="px-4 pt-6 sm:px-9">
-        <h1 className="font-display text-3xl leading-tight sm:text-4xl">The world is belts, not a pit.</h1>
+        <h1 className="font-display text-3xl leading-tight sm:text-4xl">World weather on this carton.</h1>
         <p className="mt-2 max-w-2xl text-sm text-ink-soft">
-          {world.note} Last FAO pull {world.generated || "—"}. NASS {nassFarm.generated || "—"}. AAFC {marketFile.generated || "—"}.
+          {world.note} FAO {world.generated || "—"}. NASS {nassFarm.generated || "—"}. AAFC {marketFile.generated || "—"}.
         </p>
       </section>
 
+      <section className="px-4 py-4 sm:px-9">
+        <WorldFactors cmd={cmd} onCmd={(c) => navigate({ search: { cmd: c } })} />
+        <div className="mt-4">
+          <OriginFob cmd={cmd} />
+        </div>
+      </section>
+
       <section className="px-4 py-6 sm:px-9">
-        <h2 className="font-display text-xl">FAO Food Price Index</h2>
-        <p className="mt-1 text-xs text-ink-soft">{world.source}. YoY is vs the same month last year.</p>
+        <h2 className="font-display text-xl">FAO Food Price Index — the real series</h2>
+        <p className="mt-1 text-xs text-ink-soft">{world.source}. YoY vs the same month last year. Not lettuce — freight and feed weather.</p>
         <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
           {(["food", "cereals", "oils", "sugar", "meat", "dairy"] as const).map((k) => (
             <li key={k} className="rounded-xl border border-line bg-cream p-3">
@@ -88,7 +107,7 @@ function WorldPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-6 sm:px-9">
+      <section className="px-4 pb-16 sm:px-9">
         <h2 className="font-display text-xl">Public tape vs experience</h2>
         <div className="mt-3 overflow-x-auto rounded-xl border border-line bg-cream">
           <table className="w-full text-left text-sm">
@@ -113,24 +132,6 @@ function WorldPage() {
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section className="grid gap-3 px-4 pb-6 sm:px-9 md:grid-cols-2">
-        {(world.conditions || []).map((c) => (
-          <article key={c.t} className="rounded-xl border border-line bg-cream p-4">
-            <h3 className="font-display text-lg">{c.t}</h3>
-            <p className="mt-2 text-sm text-ink-soft">{c.d}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="px-4 pb-16 sm:px-9">
-        <h2 className="font-display text-xl">How to use this on a quote</h2>
-        <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-ink-soft">
-          {(world.howToUse || []).map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ol>
       </section>
     </div>
   );

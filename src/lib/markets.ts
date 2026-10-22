@@ -1,4 +1,5 @@
 import { marketsFile } from "./data";
+import type { LiveQuote } from "./yahoo-quotes";
 import type { CropTapeMap, ListedName } from "./types";
 
 export function listedBySymbol(): Map<string, ListedName> {
@@ -15,11 +16,22 @@ export function namesForCrop(label: string): ListedName[] {
   return tape.tickers.map((s) => by.get(s)).filter((n): n is ListedName => Boolean(n));
 }
 
+export function withLive(n: ListedName, q?: LiveQuote): ListedName {
+  if (!q || q.price == null) return n;
+  return {
+    ...n,
+    price: q.price,
+    chgPct: q.chgPct,
+    prevClose: q.prevClose,
+    currency: q.currency || n.currency,
+  };
+}
+
 export function fmtPx(n: ListedName): string {
   if (n.price == null) return "—";
   if (n.symbol === "OJ=F") return `${n.price.toFixed(2)} ¢/lb`;
   const abs = Math.abs(n.price);
-  const digits = n.role === "fx" || abs < 2 ? 4 : 2;
+  const digits = n.role === "fx" || n.lens === "fx" || abs < 2 ? 4 : 2;
   const unit = n.currency && n.currency !== "USD" && n.currency !== "USX" ? ` ${n.currency}` : "";
   return `${n.price.toFixed(digits)}${unit}`;
 }

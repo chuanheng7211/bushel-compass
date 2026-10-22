@@ -18,6 +18,8 @@ import { SiteHeader } from "@/components/site-header";
 import { catalog, fullPlaybooks } from "@/lib/catalog";
 import { fmt, forecastFor, nassFor, regionalWholesale, seriesFor } from "@/lib/compass";
 import { SalesChain } from "@/components/sales-chain";
+import { WorldFactors } from "@/components/world-factors";
+import { OriginFob } from "@/components/origin-fob";
 import { cropSubs } from "@/lib/substitutes";
 import { layersFile, marketFile, nassFarm, processFile } from "@/lib/data";
 import { useDeskMoney } from "@/lib/desk-money";
@@ -83,6 +85,17 @@ function BoardPage() {
         </p>
         <div className="mt-4">
           <SalesChain cmd={cmd} formId={formSafe} onForm={setFormId} />
+        </div>
+      </section>
+
+      <section className="px-4 pb-6 sm:px-9">
+        <h2 className="font-display text-2xl">{cmd} · combined look</h2>
+        <p className="mt-1 text-sm text-ink-soft">Dest, farm, FAO, diesel, FX stacked. Same engine as World.</p>
+        <div className="mt-4">
+          <OriginFob cmd={cmd} />
+        </div>
+        <div className="mt-4">
+          <WorldFactors cmd={cmd} />
         </div>
       </section>
 

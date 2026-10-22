@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pull AAFC + NASS + FAO and write src/data/*.json."""
+"""Pull AAFC + NASS + FAO + listed weather and write src/data/*.json."""
 import subprocess, sys
 from pathlib import Path
 
@@ -19,4 +19,7 @@ if __name__ == "__main__":
     run("collect_fao.py")
     run("collect_aafc.py")
     run("collect_nass.py", optional=True)
+    run("collect_process.py", optional=True)
+    run("collect_markets.py", optional=True)
+    run("collect_ams_truck.py", optional=True)
     print("refresh complete")

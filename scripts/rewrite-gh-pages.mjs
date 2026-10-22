@@ -34,6 +34,7 @@ function rewrite(text) {
     .replaceAll('href="/origins"', `href="${PREFIX}/origins/"`)
     .replaceAll('href="/board"', `href="${PREFIX}/board/"`)
     .replaceAll('href="/grocery"', `href="${PREFIX}/grocery/"`)
+    .replaceAll('href="/order"', `href="${PREFIX}/order/"`)
     .replaceAll('href="/world"', `href="${PREFIX}/world/"`)
     .replaceAll('href="/industry"', `href="${PREFIX}/industry/"`)
     .replaceAll('href="/markets"', `href="${PREFIX}/markets/"`)

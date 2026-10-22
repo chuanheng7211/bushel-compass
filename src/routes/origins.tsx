@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { OriginMap } from "@/components/origin-map";
+import { OriginFob } from "@/components/origin-fob";
 import { SiteHeader } from "@/components/site-header";
 import { wholesaleFor } from "@/lib/compass";
 import { fullPlaybooks } from "@/lib/catalog";
@@ -52,7 +53,22 @@ function OriginsPage() {
         </div>
       </section>
       <section className="px-4 py-4 pb-16 sm:px-9">
+        {snap ? (
+          <ul className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+            <Stat k="Vancouver dest" v={snap.p50 != null ? `$${snap.p50.toFixed(2)}` : "—"} d={snap.asof || "AAFC"} />
+            <Stat k="WoW" v={snap.wow != null ? `${snap.wow > 0 ? "+" : ""}${snap.wow.toFixed(1)}%` : "—"} d="This week vs last" />
+            <Stat k="YoY" v={snap.yoy != null ? `${snap.yoy > 0 ? "+" : ""}${snap.yoy.toFixed(0)}%` : "—"} d="Same week last year" />
+            <Stat
+              k="This week’s mix"
+              v={(snap.origins || []).slice(0, 2).map((o) => o[0]).join(" · ") || "—"}
+              d={(snap.origins || []).map((o) => `${o[0]} ${o[1]}`).join(" · ") || "Calendar only"}
+            />
+          </ul>
+        ) : null}
         <OriginMap cmd={cmd} play={play} snap={snap} />
+        <div className="mt-6">
+          <OriginFob cmd={cmd} />
+        </div>
         <div className="mt-8 grid gap-3 md:grid-cols-3">
           <Note
             t="North America truck"
@@ -78,5 +94,15 @@ function Note({ t, d }: { t: string; d: string }) {
       <h2 className="font-display text-lg">{t}</h2>
       <p className="mt-2 text-sm text-ink-soft">{d}</p>
     </div>
+  );
+}
+
+function Stat({ k, v, d }: { k: string; v: string; d: string }) {
+  return (
+    <li className="rounded-xl border border-line bg-cream px-3 py-3">
+      <p className="text-xs uppercase tracking-wide text-ink-soft">{k}</p>
+      <p className="mt-1 font-display text-xl tabular-nums leading-tight">{v}</p>
+      <p className="mt-1 text-xs text-ink-soft">{d}</p>
+    </li>
   );
 }

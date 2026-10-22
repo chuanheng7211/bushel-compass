@@ -146,7 +146,7 @@ export type Analysis = {
   verdict: Verdict;
 };
 
-export type MarketLensId = "growers" | "inputs" | "freight" | "downstream" | "futures" | "fx";
+export type MarketLensId = "growers" | "inputs" | "energy" | "freight" | "downstream" | "futures" | "fx";
 
 export type ListedName = {
   symbol: string;

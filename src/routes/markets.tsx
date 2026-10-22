@@ -9,12 +9,14 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { CostStack } from "@/components/cost-stack";
 import { SiteHeader } from "@/components/site-header";
 import { catalog } from "@/lib/catalog";
 import { marketsFile } from "@/lib/data";
 import { sliceByPeriod } from "@/lib/desk-filter";
 import { useDesk } from "@/lib/desk-store";
-import { chgTone, cropTapeFor, fmtChg, fmtPx, listedBySymbol, namesForCrop } from "@/lib/markets";
+import { COST_STACK, useLiveQuotes } from "@/lib/live-quotes";
+import { chgTone, cropTapeFor, fmtChg, fmtPx, listedBySymbol, namesForCrop, withLive } from "@/lib/markets";
 import type { ListedName } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -33,20 +35,27 @@ function MarketsPage() {
   const [lens, setLens] = useState<string>("all");
   const [picked, setPicked] = useState<string | null>(null);
   const by = listedBySymbol();
+  const liveSyms = useMemo(() => {
+    const s = new Set(marketsFile.universe.map((n) => n.symbol));
+    for (const row of COST_STACK) s.add(row.symbol);
+    return [...s];
+  }, []);
+  const tape = useLiveQuotes(liveSyms);
   const crop = cropQ && (marketsFile.crops[cropQ] || catalog.some((c) => c.label === cropQ)) ? cropQ : undefined;
-  const tape = crop ? cropTapeFor(crop) : null;
-  const cropNames = crop ? namesForCrop(crop) : [];
+  const cropTape = crop ? cropTapeFor(crop) : null;
+  const cropNames = crop ? namesForCrop(crop).map((n) => withLive(n, tape.by.get(n.symbol))) : [];
   const shown = useMemo(() => {
-    let rows = marketsFile.universe;
+    let rows = marketsFile.universe.map((n) => withLive(n, tape.by.get(n.symbol)));
     if (lens !== "all") rows = rows.filter((n) => n.lens === lens);
     if (crop) {
       const want = new Set(cropTapeFor(crop).tickers);
       rows = rows.filter((n) => want.has(n.symbol));
     }
     return rows;
-  }, [lens, crop]);
+  }, [lens, crop, tape.by]);
 
-  const featured = picked ? by.get(picked) : cropNames[0] || shown[0];
+  const featuredRaw = picked ? by.get(picked) : cropNames[0] || shown[0];
+  const featured = featuredRaw ? withLive(featuredRaw, tape.by.get(featuredRaw.symbol)) : undefined;
   const history = featured ? marketsFile.history[featured.symbol] || [] : [];
   const cropLabels = Object.keys(marketsFile.crops).sort();
 
@@ -57,13 +66,22 @@ function MarketsPage() {
 
   return (
     <div className="min-h-dvh bg-paper text-ink">
-      <SiteHeader kicker="Listed growers, inputs, freight, and buyers — weather around the carton, not the carton." />
+      <SiteHeader kicker="原物料, freight, FX — delayed Yahoo on this desk. Not the carton." />
       <section className="px-4 pt-6 sm:px-9">
-        <h1 className="font-display text-3xl leading-tight sm:text-4xl">The pit is not the carton.</h1>
+        <h1 className="font-display text-3xl leading-tight sm:text-4xl">What actually moves the landed dollar.</h1>
         <p className="mt-2 max-w-2xl text-sm text-ink-soft">{marketsFile.thesis}</p>
-        <p className="mt-2 text-xs text-ink-soft">
-          {marketsFile.source} Pulled {marketsFile.generated || "—"}.
-          {marketsFile.quoted != null ? ` ${marketsFile.quoted}/${marketsFile.of} names printed.` : ""}
+        <p className="mt-2 flex flex-wrap items-center gap-2 text-xs text-ink-soft">
+          <span
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-lg border px-2 py-1 font-medium",
+              tape.live ? "border-moss bg-moss-soft text-moss" : "border-line bg-cream text-ink-soft",
+            )}
+          >
+            <span className={cn("h-1.5 w-1.5 rounded-full", tape.live ? "bg-moss" : "bg-ink-soft")} />
+            {tape.live ? "Live · delayed ~15m" : "Snapshot — live tape unreachable"}
+          </span>
+          {marketsFile.source} Last file {marketsFile.generated || "—"}.
+          {tape.asof ? ` Polled ${tape.asof.slice(11, 19)} UTC.` : ""}
         </p>
       </section>
 
@@ -71,6 +89,10 @@ function MarketsPage() {
         <div className="rounded-xl border border-warn bg-warn-soft p-4 text-sm text-warn">
           {marketsFile.disclaimer}
         </div>
+      </section>
+
+      <section className="px-4 pb-4 sm:px-9">
+        <CostStack byName={by} live={tape.by} onPick={setPicked} picked={picked} />
       </section>
 
       <section className="px-4 sm:px-9">
@@ -118,7 +140,7 @@ function MarketsPage() {
             );
           })}
         </div>
-        {tape && crop ? (
+        {cropTape && crop ? (
           <div className="mt-4 rounded-xl border border-line bg-cream p-4">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="font-display text-lg">{crop}</h3>
@@ -126,9 +148,9 @@ function MarketsPage() {
                 Open in Compass
               </Link>
             </div>
-            <p className="mt-1 text-sm text-ink-soft">{tape.read}</p>
-            {tape.futures.length ? (
-              <p className="mt-2 text-xs text-warn">Listed futures on this crop: {tape.futures.join(", ")} — juice or process, not a fresh carton.</p>
+            <p className="mt-1 text-sm text-ink-soft">{cropTape.read}</p>
+            {cropTape.futures.length ? (
+              <p className="mt-2 text-xs text-warn">Listed futures on this crop: {cropTape.futures.join(", ")} — juice or process, not a fresh carton.</p>
             ) : (
               <p className="mt-2 text-xs text-ink-soft">No carton futures. The names below are weather, not a bid.</p>
             )}

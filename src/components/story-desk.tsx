@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, Download } from "lucide-react";
+import { Copy, Download, Link2 } from "lucide-react";
 import { ANGLES, captionWithTags, storyFor, type AngleId } from "@/lib/stories";
 import type { BannerId } from "@/lib/grocery";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ export function StoryDesk({
   onAngle: (id: AngleId) => void;
 }) {
   const story = storyFor(cmd, angle, { ticketCadKg, store, banner });
-  const [copied, setCopied] = useState<"en" | "zh" | null>(null);
+  const [copied, setCopied] = useState<"en" | "zh" | "link" | null>(null);
   const en = captionWithTags(story.en, story.tagsEn);
   const zh = captionWithTags(story.zh, story.tagsZh);
 
@@ -33,6 +33,18 @@ export function StoryDesk({
     } catch {
       const el = document.getElementById(which === "en" ? "story-en" : "story-zh") as HTMLTextAreaElement | null;
       el?.select();
+    }
+  }
+
+  async function copyLink() {
+    const url = typeof window !== "undefined" ? window.location.href : "";
+    if (!url) return;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied("link");
+      window.setTimeout(() => setCopied(null), 1600);
+    } catch {
+      /* select-all in the address bar is the fallback */
     }
   }
 
@@ -52,11 +64,21 @@ export function StoryDesk({
 
   return (
     <div className="space-y-4">
-      <div>
-        <h2 className="font-display text-xl">Post this</h2>
-        <p className="mt-1 text-sm text-ink-soft">
-          Instagram in English. 小红书 in Chinese. Download the 4:5 card, paste the caption, add the hashtags. We do not post for you.
-        </p>
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 className="font-display text-xl">Post this</h2>
+          <p className="mt-1 text-sm text-ink-soft">
+            Instagram in English. 小红书 in Chinese. Download the 4:5 card, paste the caption, add the hashtags. We do not post for you.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={copyLink}
+          className="flex min-h-11 items-center gap-2 rounded-xl border border-line bg-cream px-3 text-sm"
+        >
+          <Link2 className="size-4" aria-hidden />
+          {copied === "link" ? "Link copied" : "Copy desk link"}
+        </button>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -129,17 +151,23 @@ export function StoryDesk({
         </div>
       </div>
 
-      <ol className="grid gap-2 text-sm sm:grid-cols-2">
+      <ol className="grid gap-2 text-sm sm:grid-cols-3">
         <li className="rounded-xl border border-line bg-cream p-4">
-          <p className="text-xs uppercase tracking-wide text-ink-soft">Instagram</p>
+          <p className="text-xs uppercase tracking-wide text-ink-soft">1 · Instagram</p>
           <p className="mt-1">
-            Feed is 4:5. First line is the hook. One card, one crop, one number. Stories can reuse the same card. Do not tag a grocer you did not name in the ticket.
+            Feed is 4:5. First line is the hook. One card, one crop, one number. Do not tag a grocer you did not name in the ticket.
           </p>
         </li>
         <li className="rounded-xl border border-line bg-cream p-4">
-          <p className="text-xs uppercase tracking-wide text-ink-soft">小红书</p>
+          <p className="text-xs uppercase tracking-wide text-ink-soft">2 · 小红书</p>
           <p className="mt-1">
-            封面用下载的卡片。标题取第一句（地头到货架 / 原产地换班）。正文贴中文。话题 5 个以内。数字先行，不写表情。
+            封面用下载的卡片。标题取第一句。正文贴中文。话题 5 个以内。数字先行，不写表情。
+          </p>
+        </li>
+        <li className="rounded-xl border border-line bg-cream p-4">
+          <p className="text-xs uppercase tracking-wide text-ink-soft">3 · Send the desk</p>
+          <p className="mt-1">
+            Copy the desk link. It keeps the crop, ticket, store, and angle so a reader lands on the same numbers.
           </p>
         </li>
       </ol>

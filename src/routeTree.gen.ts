@@ -14,6 +14,7 @@ import { Route as BoardRouteImport } from './routes/board'
 import { Route as GroceryRouteImport } from './routes/grocery'
 import { Route as IndustryRouteImport } from './routes/industry'
 import { Route as MarketsRouteImport } from './routes/markets'
+import { Route as OrderRouteImport } from './routes/order'
 import { Route as OriginsRouteImport } from './routes/origins'
 import { Route as WorldRouteImport } from './routes/world'
 
@@ -42,6 +43,11 @@ const MarketsRoute = MarketsRouteImport.update({
   path: '/markets',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrderRoute = OrderRouteImport.update({
+  id: '/order',
+  path: '/order',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OriginsRoute = OriginsRouteImport.update({
   id: '/origins',
   path: '/origins',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
   '/markets': typeof MarketsRoute
+  '/order': typeof OrderRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
   '/markets': typeof MarketsRoute
+  '/order': typeof OrderRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/grocery': typeof GroceryRoute
   '/industry': typeof IndustryRoute
   '/markets': typeof MarketsRoute
+  '/order': typeof OrderRoute
   '/origins': typeof OriginsRoute
   '/world': typeof WorldRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/grocery'
     | '/industry'
     | '/markets'
+    | '/order'
     | '/origins'
     | '/world'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/grocery'
     | '/industry'
     | '/markets'
+    | '/order'
     | '/origins'
     | '/world'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/grocery'
     | '/industry'
     | '/markets'
+    | '/order'
     | '/origins'
     | '/world'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   GroceryRoute: typeof GroceryRoute
   IndustryRoute: typeof IndustryRoute
   MarketsRoute: typeof MarketsRoute
+  OrderRoute: typeof OrderRoute
   OriginsRoute: typeof OriginsRoute
   WorldRoute: typeof WorldRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MarketsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/order': {
+      id: '/order'
+      path: '/order'
+      fullPath: '/order'
+      preLoaderRoute: typeof OrderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/origins': {
       id: '/origins'
       path: '/origins'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   GroceryRoute: GroceryRoute,
   IndustryRoute: IndustryRoute,
   MarketsRoute: MarketsRoute,
+  OrderRoute: OrderRoute,
   OriginsRoute: OriginsRoute,
   WorldRoute: WorldRoute,
 }

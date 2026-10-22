@@ -18,3 +18,6 @@ AGENTS.project.md
 .grok/status
 *.log
 .DS_Store
+
+attachments/
+**/OP3511RT.txt
