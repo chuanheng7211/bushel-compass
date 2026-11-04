@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03",
+  "generated": "2026-11-04",
   "source": "Yahoo Finance delayed daily chart (query2). Not a live pit.",
   "thesis": "A carton is farm + \u539f\u7269\u6599 + miles + FX + the buyer. Almost no fresh item has a futures pit. Listed names are the cost stack around the carton \u2014 fertilizer, diesel, greenhouse gas, truck, boat, box, peso / CAD, and the grocers who set programs. They are not AMS FOB and they are not your invoice.",
   "disclaimer": "Yahoo delayed quotes (~15 minutes), not advice, not a cleared produce trade. HO=F is heating oil / ULSD, the diesel proxy \u2014 not a farm print. OJ=F is frozen concentrated orange juice. Iceberg and berries still do not have a ticker.",
@@ -496,12 +496,12 @@
         "Apples",
         "Lemons"
       ],
-      "price": 13.31,
-      "chg": 0.2444,
-      "chgPct": 1.84,
-      "prevClose": 13.07,
+      "price": 13.08,
+      "chg": -0.226,
+      "chgPct": -1.73,
+      "prevClose": 13.31,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 4.39,
       "ret3m": -4.93
     },
@@ -518,12 +518,12 @@
         "Mangoes",
         "Melons"
       ],
-      "price": 27.04,
-      "chg": -0.3064,
-      "chgPct": -1.13,
-      "prevClose": 27.3499,
+      "price": 27.15,
+      "chg": 0.1105,
+      "chgPct": 0.41,
+      "prevClose": 27.0399,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -8.86,
       "ret3m": -9.78
     },
@@ -537,12 +537,12 @@
       "crops": [
         "Avocados"
       ],
-      "price": 11.47,
-      "chg": -0.0299,
-      "chgPct": -0.26,
-      "prevClose": 11.5,
+      "price": 10.98,
+      "chg": -0.4691,
+      "chgPct": -4.27,
+      "prevClose": 11.47,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -10.46,
       "ret3m": -10.04
     },
@@ -559,12 +559,12 @@
         "Oranges",
         "Avocados"
       ],
-      "price": 10.64,
-      "chg": -0.0399,
-      "chgPct": -0.38,
-      "prevClose": 10.6801,
+      "price": 10.06,
+      "chg": -0.5484,
+      "chgPct": -5.45,
+      "prevClose": 10.64,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -11.26,
       "ret3m": -21.53
     },
@@ -578,12 +578,12 @@
       "crops": [
         "Oranges"
       ],
-      "price": 37.33,
-      "chg": -0.0698,
-      "chgPct": -0.19,
-      "prevClose": 37.3999,
+      "price": 37.11,
+      "chg": -0.2186,
+      "chgPct": -0.59,
+      "prevClose": 37.3299,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -2.76,
       "ret3m": -2.76
     },
@@ -599,12 +599,12 @@
         "Cucumbers",
         "Peppers"
       ],
-      "price": 2.61,
-      "chg": 0.1148,
-      "chgPct": 4.4,
-      "prevClose": 2.5,
+      "price": 2.85,
+      "chg": 0.2621,
+      "chgPct": 9.2,
+      "prevClose": 2.61,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -8.1,
       "ret3m": 31.16
     },
@@ -618,12 +618,12 @@
       "crops": [
         "Potatoes"
       ],
-      "price": 56.58,
-      "chg": 2.6157,
-      "chgPct": 4.62,
-      "prevClose": 54.0799,
+      "price": 54.92,
+      "chg": -1.6114,
+      "chgPct": -2.93,
+      "prevClose": 56.5801,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 26.95,
       "ret3m": 26.95
     },
@@ -642,12 +642,12 @@
         "Onions",
         "Carrots"
       ],
-      "price": 70.2,
-      "chg": 0.789,
-      "chgPct": 1.12,
-      "prevClose": 69.4197,
+      "price": 69.32,
+      "chg": -0.8693,
+      "chgPct": -1.25,
+      "prevClose": 70.2003,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 0.2,
       "ret3m": 4.9
     },
@@ -663,12 +663,12 @@
         "Sweet Corn",
         "Lettuce"
       ],
-      "price": 19.03,
-      "chg": 0.6622,
-      "chgPct": 3.48,
-      "prevClose": 18.39,
+      "price": 18.42,
+      "chg": -0.5904,
+      "chgPct": -3.21,
+      "prevClose": 19.0299,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -10.62,
       "ret3m": -10.62
     },
@@ -685,12 +685,12 @@
         "Sweet Corn",
         "Celery"
       ],
-      "price": 120.33,
-      "chg": -2.8987,
-      "chgPct": -2.41,
-      "prevClose": 123.3003,
+      "price": 116.81,
+      "chg": -3.4167,
+      "chgPct": -2.92,
+      "prevClose": 120.3296,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 3.71,
       "ret3m": 3.71
     },
@@ -707,12 +707,12 @@
         "Onions",
         "Apples"
       ],
-      "price": 667.6,
-      "chg": -7.7909,
-      "chgPct": -1.17,
-      "prevClose": 675.4829,
+      "price": 665.83,
+      "chg": -1.7644,
+      "chgPct": -0.27,
+      "prevClose": 667.5991,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -2.14,
       "ret3m": -2.14
     },
@@ -729,12 +729,12 @@
         "Broccoli",
         "Beans"
       ],
-      "price": 11.92,
-      "chg": 0.2867,
-      "chgPct": 2.4,
-      "prevClose": 11.6401,
+      "price": 11.88,
+      "chg": -0.0399,
+      "chgPct": -0.34,
+      "prevClose": 11.9201,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -3.79,
       "ret3m": -3.79
     },
@@ -753,12 +753,12 @@
         "Kiwi Fruit",
         "Carrots"
       ],
-      "price": 14.6,
-      "chg": 0.2337,
-      "chgPct": 1.6,
-      "prevClose": 14.3699,
+      "price": 14.56,
+      "chg": -0.0399,
+      "chgPct": -0.27,
+      "prevClose": 14.6,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 4.51,
       "ret3m": 3.03
     },
@@ -777,12 +777,12 @@
         "Apples",
         "Celery"
       ],
-      "price": 61.66,
-      "chg": 0.9033,
-      "chgPct": 1.47,
-      "prevClose": 60.7697,
+      "price": 62.81,
+      "chg": 1.1714,
+      "chgPct": 1.86,
+      "prevClose": 61.66,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -7.64,
       "ret3m": -13.91
     },
@@ -801,12 +801,12 @@
         "Kiwi Fruit",
         "Bananas"
       ],
-      "price": 28.35,
-      "chg": -0.0301,
-      "chgPct": -0.11,
-      "prevClose": 28.3801,
+      "price": 29.3,
+      "chg": 0.9818,
+      "chgPct": 3.35,
+      "prevClose": 28.35,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -4.32,
       "ret3m": 3.88
     },
@@ -823,12 +823,12 @@
         "Raspberries",
         "Lettuce"
       ],
-      "price": 49.02,
-      "chg": 1.6863,
-      "chgPct": 3.44,
-      "prevClose": 47.3898,
+      "price": 46.96,
+      "chg": -1.9733,
+      "chgPct": -4.2,
+      "prevClose": 49.0198,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 17.27,
       "ret3m": 17.27
     },
@@ -845,12 +845,12 @@
         "Oranges",
         "Pears"
       ],
-      "price": 36.64,
-      "chg": 0.2719,
-      "chgPct": 0.74,
-      "prevClose": 36.3701,
+      "price": 35.12,
+      "chg": -1.4568,
+      "chgPct": -4.15,
+      "prevClose": 36.6398,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 14.32,
       "ret3m": 14.32
     },
@@ -869,12 +869,12 @@
         "Avocados",
         "Bananas"
       ],
-      "price": 68.36,
-      "chg": 1.6386,
-      "chgPct": 2.4,
-      "prevClose": 66.7598,
+      "price": 66.81,
+      "chg": -1.5146,
+      "chgPct": -2.27,
+      "prevClose": 68.3597,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 15.81,
       "ret3m": 18.29
     },
@@ -892,12 +892,12 @@
         "Blueberries",
         "Oranges"
       ],
-      "price": 1040.55,
-      "chg": 29.0626,
-      "chgPct": 2.79,
-      "prevClose": 1012.2771,
+      "price": 1019.26,
+      "chg": -20.8541,
+      "chgPct": -2.05,
+      "prevClose": 1040.5496,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 12.67,
       "ret3m": 12.67
     },
@@ -915,12 +915,12 @@
         "Potatoes",
         "Onions"
       ],
-      "price": 127.69,
-      "chg": 4.321,
-      "chgPct": 3.38,
-      "prevClose": 123.5104,
+      "price": 124.86,
+      "chg": -2.7669,
+      "chgPct": -2.22,
+      "prevClose": 127.6896,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 21.53,
       "ret3m": 21.53
     },
@@ -939,12 +939,12 @@
         "Mushrooms",
         "Celery"
       ],
-      "price": 81.74,
-      "chg": -1.1435,
-      "chgPct": -1.4,
-      "prevClose": 82.8998,
+      "price": 74.11,
+      "chg": -6.9174,
+      "chgPct": -9.33,
+      "prevClose": 81.7396,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 5.48,
       "ret3m": -1.27
     },
@@ -960,12 +960,12 @@
         "Tomatoes",
         "Potatoes"
       ],
-      "price": 105.8,
-      "chg": 2.2366,
-      "chgPct": 2.11,
-      "prevClose": 103.6097,
+      "price": 101.36,
+      "chg": -4.2541,
+      "chgPct": -4.2,
+      "prevClose": 105.8004,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 11.8,
       "ret3m": 11.8
     },
@@ -981,12 +981,12 @@
         "Tomatoes",
         "Potatoes"
       ],
-      "price": 100.84,
-      "chg": 1.8222,
-      "chgPct": 1.81,
-      "prevClose": 99.0502,
+      "price": 96.51,
+      "chg": -4.1441,
+      "chgPct": -4.29,
+      "prevClose": 100.8401,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 8.92,
       "ret3m": 8.92
     },
@@ -1000,14 +1000,14 @@
       "crops": [
         "Oranges"
       ],
-      "price": 138.95,
-      "chg": 0.3515,
-      "chgPct": 0.25,
-      "prevClose": 138.5993,
+      "price": 142.5,
+      "chg": 0.4517,
+      "chgPct": 0.32,
+      "prevClose": 142.0497,
       "currency": "USX",
-      "asof": "2026-11-02",
-      "ret1m": 2.77,
-      "ret3m": -12.99
+      "asof": "2026-11-03",
+      "ret1m": -1.28,
+      "ret3m": -9.64
     },
     {
       "symbol": "DBA",
@@ -1017,12 +1017,12 @@
       "what": "Grains, sugar, cattle, cocoa. Almost no fresh produce weight.",
       "means": "DBA ripping is feed and freight weather around produce \u2014 not iceberg.",
       "crops": [],
-      "price": 26.8,
-      "chg": -0.0898,
-      "chgPct": -0.34,
-      "prevClose": 26.8901,
+      "price": 26.52,
+      "chg": -0.2771,
+      "chgPct": -1.04,
+      "prevClose": 26.8001,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -5.83,
       "ret3m": -5.83
     },
@@ -1034,12 +1034,12 @@
       "what": "Deere, fertilizer, processors. Listed ag businesses, not cartons.",
       "means": "MOO is the input-and-iron complex. Pair with NTR / DE, not AMS FOB.",
       "crops": [],
-      "price": 82.31,
-      "chg": 0.3317,
-      "chgPct": 0.4,
-      "prevClose": 81.9796,
+      "price": 81.74,
+      "chg": -0.5665,
+      "chgPct": -0.69,
+      "prevClose": 82.3104,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 0.09,
       "ret3m": 0.09
     },
@@ -1056,14 +1056,14 @@
         "Strawberries",
         "Grapes (Table)"
       ],
-      "price": 1.3991,
-      "chg": 0.0007,
-      "chgPct": 0.05,
-      "prevClose": 1.3984,
+      "price": 1.3968,
+      "chg": -0.0039,
+      "chgPct": -0.28,
+      "prevClose": 1.4007,
       "currency": "CAD",
-      "asof": "2026-11-03",
-      "ret1m": -1.85,
-      "ret3m": -0.14
+      "asof": "2026-11-04",
+      "ret1m": -2.08,
+      "ret3m": -0.33
     },
     {
       "symbol": "USDMXN=X",
@@ -1080,14 +1080,14 @@
         "Asparagus",
         "Peppers"
       ],
-      "price": 18.5737,
-      "chg": 0.0037,
-      "chgPct": 0.02,
-      "prevClose": 18.57,
+      "price": 18.8281,
+      "chg": 0.0157,
+      "chgPct": 0.08,
+      "prevClose": 18.8124,
       "currency": "MXN",
-      "asof": "2026-11-03",
-      "ret1m": 2.27,
-      "ret3m": 7.79
+      "asof": "2026-11-04",
+      "ret1m": 4.24,
+      "ret3m": 9.44
     },
     {
       "symbol": "HO=F",
@@ -1105,14 +1105,14 @@
         "Celery",
         "Bananas"
       ],
-      "price": 4.4388,
-      "chg": 0.0173,
-      "chgPct": 0.39,
-      "prevClose": 4.4216,
+      "price": 4.542,
+      "chg": 0.0114,
+      "chgPct": 0.25,
+      "prevClose": 4.5306,
       "currency": "USD",
-      "asof": "2026-11-03",
-      "ret1m": -1.38,
-      "ret3m": 17.72
+      "asof": "2026-11-04",
+      "ret1m": -0.07,
+      "ret3m": 19.65
     },
     {
       "symbol": "NG=F",
@@ -1126,14 +1126,14 @@
         "Cucumbers",
         "Peppers"
       ],
-      "price": 2.883,
-      "chg": 0.0272,
-      "chgPct": 0.94,
-      "prevClose": 2.856,
+      "price": 2.895,
+      "chg": 0.0,
+      "chgPct": 0.0,
+      "prevClose": 2.895,
       "currency": "USD",
-      "asof": "2026-11-03",
-      "ret1m": -5.01,
-      "ret3m": 7.49
+      "asof": "2026-11-04",
+      "ret1m": -5.58,
+      "ret3m": 7.7
     },
     {
       "symbol": "CL=F",
@@ -1147,14 +1147,14 @@
         "Lettuce",
         "Blueberries"
       ],
-      "price": 96.9,
-      "chg": 0.4419,
-      "chgPct": 0.46,
-      "prevClose": 96.4601,
+      "price": 96.24,
+      "chg": 0.1501,
+      "chgPct": 0.16,
+      "prevClose": 96.0901,
       "currency": "USD",
-      "asof": "2026-11-03",
-      "ret1m": 6.35,
-      "ret3m": 6.35
+      "asof": "2026-11-04",
+      "ret1m": 7.61,
+      "ret3m": 7.61
     },
     {
       "symbol": "UAN",
@@ -1169,12 +1169,12 @@
         "Celery",
         "Sweet Corn"
       ],
-      "price": 124.76,
-      "chg": -1.9687,
-      "chgPct": -1.58,
-      "prevClose": 126.7603,
+      "price": 118.62,
+      "chg": -5.8373,
+      "chgPct": -4.92,
+      "prevClose": 124.7594,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -0.05,
       "ret3m": -1.05
     },
@@ -1190,12 +1190,12 @@
         "Lettuce",
         "Onions"
       ],
-      "price": 4.57,
-      "chg": -0.01,
-      "chgPct": -0.22,
-      "prevClose": 4.58,
+      "price": 4.36,
+      "chg": -0.2003,
+      "chgPct": -4.59,
+      "prevClose": 4.57,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": -9.68,
       "ret3m": -9.68
     },
@@ -1212,12 +1212,12 @@
         "Oranges",
         "Pears"
       ],
-      "price": 258.64,
-      "chg": 1.8338,
-      "chgPct": 0.71,
-      "prevClose": 256.8192,
+      "price": 254.95,
+      "chg": -3.6381,
+      "chgPct": -1.43,
+      "prevClose": 258.6408,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 12.79,
       "ret3m": 12.79
     },
@@ -1234,12 +1234,12 @@
         "Apples",
         "Oranges"
       ],
-      "price": 307.0,
-      "chg": 3.0301,
-      "chgPct": 0.99,
-      "prevClose": 303.9995,
+      "price": 303.43,
+      "chg": -3.5289,
+      "chgPct": -1.16,
+      "prevClose": 307.0004,
       "currency": "USD",
-      "asof": "2026-11-02",
+      "asof": "2026-11-03",
       "ret1m": 10.81,
       "ret3m": 10.81
     },
@@ -1256,14 +1256,14 @@
         "Blueberries",
         "Peaches"
       ],
-      "price": 976.85,
-      "chg": 0.0,
-      "chgPct": 0.0,
-      "prevClose": 976.85,
+      "price": 980.56,
+      "chg": -0.0304,
+      "chgPct": -0.0,
+      "prevClose": 980.5904,
       "currency": "CLP",
-      "asof": "2026-11-02",
-      "ret1m": 1.37,
-      "ret3m": 1.37
+      "asof": "2026-11-03",
+      "ret1m": -0.2,
+      "ret3m": -0.2
     },
     {
       "symbol": "NZDUSD=X",
@@ -1276,14 +1276,14 @@
         "Kiwi Fruit",
         "Apples"
       ],
-      "price": 0.561,
-      "chg": -0.001,
-      "chgPct": -0.17,
-      "prevClose": 0.562,
+      "price": 0.5611,
+      "chg": 0.0025,
+      "chgPct": 0.44,
+      "prevClose": 0.5586,
       "currency": "USD",
-      "asof": "2026-11-03",
-      "ret1m": -0.12,
-      "ret3m": -0.12
+      "asof": "2026-11-04",
+      "ret1m": 0.21,
+      "ret3m": -0.11
     },
     {
       "symbol": "USDPEN=X",
@@ -1297,14 +1297,14 @@
         "Avocados",
         "Blueberries"
       ],
-      "price": 3.4634,
-      "chg": 0.0016,
-      "chgPct": 0.05,
-      "prevClose": 3.4618,
+      "price": 3.4591,
+      "chg": 0.0,
+      "chgPct": 0.0,
+      "prevClose": 3.4591,
       "currency": "PEN",
-      "asof": "2026-11-03",
-      "ret1m": 3.27,
-      "ret3m": 3.27
+      "asof": "2026-11-04",
+      "ret1m": 0.41,
+      "ret3m": 3.15
     }
   ],
   "history": {
@@ -4852,10 +4852,6 @@
     ],
     "OJ=F": [
       {
-        "d": "2026-07-13",
-        "p": 142.55
-      },
-      {
         "d": "2026-07-14",
         "p": 140.25
       },
@@ -5169,14 +5165,14 @@
       },
       {
         "d": "2026-11-02",
-        "p": 138.95
+        "p": 132.0
+      },
+      {
+        "d": "2026-11-03",
+        "p": 142.5
       }
     ],
     "USDCAD=X": [
-      {
-        "d": "2026-07-14",
-        "p": 1.4052
-      },
       {
         "d": "2026-07-15",
         "p": 1.4037
@@ -5491,14 +5487,14 @@
       },
       {
         "d": "2026-11-03",
-        "p": 1.3991
+        "p": 1.3983
+      },
+      {
+        "d": "2026-11-04",
+        "p": 1.3968
       }
     ],
     "USDMXN=X": [
-      {
-        "d": "2026-07-14",
-        "p": 17.4188
-      },
       {
         "d": "2026-07-15",
         "p": 17.37
@@ -5813,14 +5809,14 @@
       },
       {
         "d": "2026-11-03",
-        "p": 18.5737
+        "p": 18.5709
+      },
+      {
+        "d": "2026-11-04",
+        "p": 18.8281
       }
     ],
     "HO=F": [
-      {
-        "d": "2026-07-13",
-        "p": 3.8236
-      },
       {
         "d": "2026-07-14",
         "p": 4.0143
@@ -6134,15 +6130,15 @@
         "p": 4.7905
       },
       {
-        "d": "2026-11-03",
-        "p": 4.4388
+        "d": "2026-11-02",
+        "p": 4.4216
+      },
+      {
+        "d": "2026-11-04",
+        "p": 4.542
       }
     ],
     "NG=F": [
-      {
-        "d": "2026-07-13",
-        "p": 2.897
-      },
       {
         "d": "2026-07-14",
         "p": 2.904
@@ -6456,8 +6452,12 @@
         "p": 2.898
       },
       {
-        "d": "2026-11-03",
-        "p": 2.883
+        "d": "2026-11-02",
+        "p": 2.856
+      },
+      {
+        "d": "2026-11-04",
+        "p": 2.895
       }
     ],
     "UAN": [
